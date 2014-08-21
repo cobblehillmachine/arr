@@ -41,8 +41,8 @@
 <body <?php body_class(); ?> id="<?php echo  strtolower(str_replace(' ','-',get_the_title())); ?>">
 	<div id="header" class="cont">
 		
-			<a id="logo" href="/" class="span3"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" /></a>
-			<div id="nav" class="span9">
+			<a id="logo" href="/" class="span4"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" /></a>
+			<div id="nav" class="span8">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</div>
 		

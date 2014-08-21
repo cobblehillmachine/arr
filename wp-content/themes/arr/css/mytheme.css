@@ -31,11 +31,14 @@ mark {background:#fff;}
 .headline, #header #nav li a {font-family: "ff-good-headline-web-pro-con",sans-serif; font-style: normal; font-weight: 500;}
 
 /*HEADER*/
-#header #logo {float:left; background:#27838a; padding:10px 25px; text-align:right;}
-#header #nav {float:left; background:#231f20; padding:18;}
-#header #nav li a {color:#fff; text-transform: uppercase; font-size:18px; float:left;}
+#header {background:#231f20; height:58px;}
+#header #logo {float:left; background:#27838a; padding:12px 25px 0 10%; text-align:left; height:100%;}
+#header #nav {float:left;  padding:17px 10% 0 25px; height:100%;}
+#header #nav li {float:left; margin-left:58px;}
+#header #nav li:first-child {margin-left:0;}
+#header #nav li a {color:#fff; text-transform: uppercase; font-size:18px; }
 #header #nav li a:hover {color:#a99da0; text-decoration: none;}
-#header #nav .menu-main-nav-container {float:right; width:100%;}
+#header #nav .menu-main-nav-container {float:right;}
 
 /*FOOTER*/
 
