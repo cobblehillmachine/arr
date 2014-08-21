@@ -20,6 +20,8 @@
 <!--<![endif]-->
 <head>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//use.typekit.net/vtk6pun.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
