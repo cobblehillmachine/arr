@@ -1,0 +1,40 @@
+body {margin:0; padding:0; width:100%; min-width:1000px;}
+a {text-decoration:none; color:#fff; outline:0;}
+a img {border:0;}
+img {vertical-align:top; max-width:100%;}
+ul {list-style:none; padding:0; margin:0;}
+p {margin:0 0 25px 0; display:inline-block;}
+ul, li, ol, fieldset {list-style:none; padding:0; margin:0; border:none;}
+input, select, textarea {-webkit-appearance:none; -webkit-border-radius:0px; -moz-border-radius:0px; border-radius:0px;}
+input[type="checkbox"] {-webkit-appearance:checkbox;}
+input[type="radio"] {-webkit-appearance:radio;}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
+::-webkit-input-placeholder {color: #000; opacity:1; filter:alpha(opacity=100);}
+:-moz-placeholder {color: #000; opacity:1; filter:alpha(opacity=100);}
+::-moz-placeholder {color: #000; opacity:1; filter:alpha(opacity=100);}
+:-ms-input-placeholder {color: #000; opacity:1; filter:alpha(opacity=100);}
+select {-webkit-appearance:none; -moz-appearance:none; appearance: none; -webkit-border-radius:0px; -moz-border-radius:0px; border-radius:0px; text-overflow:""; text-indent:0.01px; background:url(../images/small-arrow.png) no-repeat 92% 20px #fff; font:normal 14px "utopia-std"; padding-bottom:13px; color:#93969a; margin-bottom:30px;}
+select:-moz-focusring {color: transparent; text-shadow: 0 0 0 #93969a;}
+select::-ms-expand {display:none;}
+input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset;}
+mark {background:#fff;}
+* {box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
+*:focus {outline:none;}
+/*REUSABLE*/
+.mid-cont {position:relative; width:1000px; margin:auto;}
+.hidden {display:none;}
+.last {margin-right:0;}
+
+/*HEADER*/
+
+/*FOOTER*/
+
+/*HOMEPAGE*/
+
+
+
+
+
+
+
+
