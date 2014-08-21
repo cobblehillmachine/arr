@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+  showMobileNav();
 
 });
 
@@ -27,4 +27,22 @@ function centerItem(item,iWidth,iHeight){
        'left': w/2,
        'top':h/2
    });   
+}
+
+function showMobileNav() {
+  $('#hamburger').on({
+    click: function() {
+      $('#mobile-nav').slideToggle();
+      $(this).hide();
+      $('#mobile-close').show();
+    }
+  });
+  $('#mobile-close').on({
+    click: function() {
+      $('#mobile-nav').slideToggle();
+      $(this).hide();
+      $('#hamburger').show();
+    }
+  });
+
 }

@@ -1,4 +1,4 @@
-body {margin:0; padding:0; width:100%; min-width:320px; font: normal 16px "abril-text"; font-weight: 400; color:#231f20;}
+body {margin:0; padding:0; width:100%; min-width:320px; font: normal 16px "abril-text"; font-weight: 400; color:#231f20; overflow-x:hidden;}
 a {text-decoration:none; color:#27838a; outline:0;}
 a:hover {text-decoration: underline;}
 a img {border:0;}
@@ -22,36 +22,73 @@ mark {background:#fff;}
 * {box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
 *:focus {outline:none;}
 /*REUSABLE*/
-.mid-cont {position:relative; width:90%; margin:auto;}
+.mid-cont {position:relative; width:90%; margin:auto; max-width:1700px;}
 .cont {position:relative; float:left; width:100%;}
-.hidden {display:none;}
+.hidden, .mobile, #mobile-nav, #mobile-close {display:none;}
 .last {margin-right:0;}
+.desktop {display:block;}
+label {font-size:18px; color:#27838a; text-transform:uppercase; position:relative; float:left; width:100%;}
 
 /*FONTS*/
-.headline, #header #nav li a {font-family: "ff-good-headline-web-pro-con",sans-serif; font-style: normal; font-weight: 500;}
+.headline, #header #nav li a, #mobile-nav li a, label, #footer {font-family: "ff-good-headline-web-pro-con",sans-serif; font-style: normal; font-weight: 500; letter-spacing: 1px;}
 
 /*HEADER*/
-#header {background:#231f20; height:58px;}
-#header #logo {float:left; background:#27838a; padding:12px 25px 0 10%; text-align:left; height:100%;}
-#header #nav {float:left;  padding:17px 10% 0 25px; height:100%;}
+#header {background:#27838a; height:58px;}
+#header:before { 
+  content: '';
+  position: absolute;
+  left: 33.3333333333%;
+  width: 100%; 
+  height: 100%; 
+  background-color: #231f20;
+  background-color: #231f20;
+  top: 0;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#header #logo {float:left; padding:12px 25px 0 0; text-align:left; height:100%;}
+#header #nav {float:left;  padding:17px 0 0 25px; height:100%;}
 #header #nav li {float:left; margin-left:58px;}
 #header #nav li:first-child {margin-left:0;}
 #header #nav li a {color:#fff; text-transform: uppercase; font-size:18px; }
-#header #nav li a:hover {color:#a99da0; text-decoration: none;}
+#header #nav li a:hover, #mobile-nav li a:hover, #footer .footer-info .span4 a span:hover {color:#a99da0; text-decoration: none;}
 #header #nav .menu-main-nav-container {float:right;}
 
 /*FOOTER*/
+#footer {border-top:5px solid #27838a; background:#231f20; padding:60px 0 75px; text-transform:uppercase; font-size:14px; color:#989190;}
+#footer span {font-size:42px; color:#fff; width:100%; float:left;}
+#footer #facebook {font-size:16px; color:#fff; float:left; border:4px solid #27838a; background:url(../images/facebook-sprite.png) no-repeat 20% 8px #27838a; padding:10px 0 10px 10%; border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;}
+#footer #facebook:hover {text-decoration:none; background-color:#231f20; color:#27838a; background-position:20% -21px;}
+#footer .footer-info .span4 {margin-bottom:40px;}
+#footer #copyright a {color:#989190;}
+#footer #copyright a:hover {color:#fff; text-decoration:none;}
+#footer #copyright {float:left; padding:14px 12px 0 25px;}
 
 /*HOMEPAGE*/
 
 /*RETINA*/
 @media (-webkit-min-device-pixel-ratio: 2) , (min-resolution: 192dpi) {
+	#footer #facebook {background:url(../images/facebook-sprite@2x.png) no-repeat 20% 8px #27838a; background-size:9px;}
 }
 
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:1099px) {
+	.mobile {display:block;}
+	.desktop {display:none;}
+	.mid-cont {width:85%;}
+/*HEADER*/
+	#header:before {background:none;}
+	#header #logo {width:85%;}
+	#header #hamburger, #header #mobile-close {float:right; margin-top:17px; cursor:pointer;}
+	#mobile-nav {float:left; width:100%; background:#231f20; text-align:center; padding-top:30px;}
+	#mobile-nav li a {float:left; width:100%; margin-bottom:30px; color:#fff; text-transform:uppercase; font-size:24px;}
+
 }
 
+@media screen and (max-width:393px) {
+	#header #logo {padding-top:16px;}
+}
 
 /*GRIDPAK*/    
 .span1 {width:8.33333333333%;}
@@ -63,7 +100,7 @@ mark {background:#fff;}
 .span7 {width:58.3333333333%; float:left;}
 .span8 {width:66.6666666667%; float:left;}
 .span9 {width:75.0%; float:left;}
-.span10 {width:83.3333333333%;}
+.span10 {width:83.3333333333%; float:left;}
 .span11 {width:91.6666666667%;}
 .span12 {margin-left:0; width:100%; float:left;}
 .row {margin-left:-25px;}

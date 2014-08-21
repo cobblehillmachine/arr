@@ -40,11 +40,14 @@
 
 <body <?php body_class(); ?> id="<?php echo  strtolower(str_replace(' ','-',get_the_title())); ?>">
 	<div id="header" class="cont">
-		
+		<div class="mid-cont">
 			<a id="logo" href="/" class="span4"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" /></a>
-			<div id="nav" class="span8">
+			<div id="hamburger" class="mobile"><img src="<?php echo get_template_directory_uri(); ?>/images/hamburger.png" /></div>
+			<div id="mobile-close"><img src="<?php echo get_template_directory_uri(); ?>/images/mobile-close.png" /></div>
+			<div id="nav" class="span8 desktop">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</div>
-		
+		</div>
 	</div>
+	<div id="mobile-nav"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></div>
 	<div id="main-wrap" class="cont">
