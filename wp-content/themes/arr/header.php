@@ -29,6 +29,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/mytheme.css" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/retina.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/mytheme.js"></script>
 
 	<!--[if lt IE 9]>
@@ -38,10 +39,12 @@
 </head>
 
 <body <?php body_class(); ?> id="<?php echo  strtolower(str_replace(' ','-',get_the_title())); ?>">
-	<div id="header">
-		<a id="logo" href="/"></a>
-		<div id="nav">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</div>
+	<div id="header" class="cont">
+		
+			<a id="logo" href="/" class="span3"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" /></a>
+			<div id="nav" class="span9">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			</div>
+		
 	</div>
-	<div id="main-wrap">
+	<div id="main-wrap" class="cont">

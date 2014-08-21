@@ -11,7 +11,7 @@
 ?>
 
 		</div>
-		<div id="footer">
+		<div id="footer" class="cont">
 		</div>
 <?php wp_footer(); ?>
 

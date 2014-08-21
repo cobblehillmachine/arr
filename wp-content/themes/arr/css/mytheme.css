@@ -1,5 +1,6 @@
-body {margin:0; padding:0; width:100%; min-width:320px; font: normal 16px "abril-text"; font-weight: 400;}
-a {text-decoration:none; color:#fff; outline:0;}
+body {margin:0; padding:0; width:100%; min-width:320px; font: normal 16px "abril-text"; font-weight: 400; color:#231f20;}
+a {text-decoration:none; color:#27838a; outline:0;}
+a:hover {text-decoration: underline;}
 a img {border:0;}
 img {vertical-align:top; max-width:100%;}
 ul {list-style:none; padding:0; margin:0;}
@@ -21,22 +22,49 @@ mark {background:#fff;}
 * {box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
 *:focus {outline:none;}
 /*REUSABLE*/
-.mid-cont {position:relative; width:1000px; margin:auto;}
+.mid-cont {position:relative; width:90%; margin:auto;}
+.cont {position:relative; float:left; width:100%;}
 .hidden {display:none;}
 .last {margin-right:0;}
 
 /*FONTS*/
-.main {font-family: "ff-good-headline-web-pro-con",sans-serif; font-style: normal; font-weight: 500;}
+.headline, #header #nav li a {font-family: "ff-good-headline-web-pro-con",sans-serif; font-style: normal; font-weight: 500;}
+
 /*HEADER*/
+#header #logo {float:left; background:#27838a; padding:10px 25px; text-align:right;}
+#header #nav {float:left; background:#231f20; padding:18;}
+#header #nav li a {color:#fff; text-transform: uppercase; font-size:18px; float:left;}
+#header #nav li a:hover {color:#a99da0; text-decoration: none;}
+#header #nav .menu-main-nav-container {float:right; width:100%;}
 
 /*FOOTER*/
 
 /*HOMEPAGE*/
 
+/*RETINA*/
+@media (-webkit-min-device-pixel-ratio: 2) , (min-resolution: 192dpi) {
+}
 
 
+@media screen and (max-width:767px) {
+}
 
 
+/*GRIDPAK*/    
+.span1 {width:8.33333333333%;}
+.span2 {width:16.6666666667%; float:left;}
+.span3 {width:25.0%; float:left;}
+.span4 {width:33.3333333333%; float:left;}
+.span5 {width:41.6666666667%; float:left;}
+.span6 {width:50%; float:left;}
+.span7 {width:58.3333333333%; float:left;}
+.span8 {width:66.6666666667%; float:left;}
+.span9 {width:75.0%; float:left;}
+.span10 {width:83.3333333333%;}
+.span11 {width:91.6666666667%;}
+.span12 {margin-left:0; width:100%; float:left;}
+.row {margin-left:-25px;}
+.col {padding-left:25px;}
 
 
 
