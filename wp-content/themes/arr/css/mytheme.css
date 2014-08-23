@@ -1,4 +1,4 @@
-body {margin:0; padding:0; width:100%; min-width:320px; font: normal 16px "abril-text"; font-weight: 400; color:#231f20; overflow-x:hidden;}
+body {margin:0; padding:0; width:100%; min-width:320px; font: normal 16px "abril-text"; font-weight: 400; color:#231f20; /*overflow-x:hidden;*/}
 a {text-decoration:none; color:#27838a; outline:0;}
 a:hover {text-decoration: underline;}
 a img {border:0;}
@@ -115,10 +115,11 @@ h3 {font-size:18px; line-height:16px; float:left; width:100%; text-transform: up
   .row {margin-left:0;}
   .span2, .span3, .span4, .span6, .span8, .span9, .span10, #footer #copyright {width:100%;}
   #footer {text-align:center;}
-  #footer #facebook {float:none; display:inline-block;}
+  #footer #facebook {float:none; display:inline-block; text-align:center;}
   .section {padding:45px 0;}
   #main-wrap {margin-top:0;}
 /*HEADER*/
+  #header:before {left:0;}
   #header {position:relative; float:left;}
 	#header:before {background:none;}
 	#header #logo {width:85%;}
