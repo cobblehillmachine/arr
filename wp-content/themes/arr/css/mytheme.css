@@ -113,7 +113,7 @@ h3 {font-size:18px; line-height:16px; float:left; width:100%; text-transform: up
 	.mid-cont {width:85%;}
   .col, .column {padding-left:0;}
   .row {margin-left:0;}
-  .span2, .span3, .span4, .span6, .span8, .span9, .span10, #footer #copyright {width:100%;}
+  .span2, .span3, .span4, .span6, .span8, .span9, .span10, #footer #copyright, .column {width:100% !important;}
   #footer {text-align:center;}
   #footer #facebook {float:none; display:inline-block; text-align:center;}
   .section {padding:45px 0;}

@@ -58,11 +58,11 @@ function showMobileNav() {
 }
 
 function columnizeContent() {
-    if ($(window).width() <= 1099) {
-      $('.intro').columnize({ columns: 1 });
-    } else {
+    // if ($(window).width() <= 1099) {
+    //   $('.intro').columnize({ columns: 1 });
+    // } else {
       $('.intro').columnize({ columns: 2 });
-    }
+    //}
     
 }
 
