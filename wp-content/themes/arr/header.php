@@ -29,6 +29,8 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/mytheme.css" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.columnizer.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.scrollTo-1.4.3.1-min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/retina.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/mytheme.js"></script>
 
@@ -39,7 +41,7 @@
 </head>
 
 <body <?php body_class(); ?> id="<?php echo  strtolower(str_replace(' ','-',get_the_title())); ?>">
-	<div id="header" class="cont">
+	<div id="header">
 		<div class="mid-cont">
 			<a id="logo" href="/" class="span4"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" /></a>
 			<div id="hamburger" class="mobile"><img src="<?php echo get_template_directory_uri(); ?>/images/hamburger.png" /></div>

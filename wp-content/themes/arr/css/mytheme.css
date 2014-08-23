@@ -4,7 +4,7 @@ a:hover {text-decoration: underline;}
 a img {border:0;}
 img {vertical-align:top; max-width:100%;}
 ul {list-style:none; padding:0; margin:0;}
-p {margin:0 0 25px 0; display:inline-block;}
+p {margin:0 0 25px 0; float:left; width:100%;}
 ul, li, ol, fieldset {list-style:none; padding:0; margin:0; border:none;}
 input, select, textarea {-webkit-appearance:none; -webkit-border-radius:0px; -moz-border-radius:0px; border-radius:0px;}
 input[type="checkbox"] {-webkit-appearance:checkbox;}
@@ -23,30 +23,30 @@ mark {background:#fff;}
 *:focus {outline:none;}
 /*REUSABLE*/
 .mid-cont {position:relative; width:90%; margin:auto; max-width:1700px;}
+#main-wrap .mid-cont {max-width:1100px}
 .cont {position:relative; float:left; width:100%;}
 .hidden, .mobile, #mobile-nav, #mobile-close {display:none;}
 .last {margin-right:0;}
 .desktop {display:block;}
+.center, #about {text-align:center;}
+.intro {text-align:left;}
+.section {padding:80px 0;}
 label {font-size:18px; color:#27838a; text-transform:uppercase; position:relative; float:left; width:100%;}
+.button {background-color:#27838a; font-size:16px; color:#fff; float:left; text-align:center; max-width:300px; border:4px solid #27838a;  padding:10px 35px; border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;}
+.button:hover {text-decoration:none; background-color:#231f20; color:#27838a;}
+h1 {font-size:42px; float:left; width:100%; line-height:40px; margin:0 0 35px;}
+h2 {font-size:28px; line-height:26px; display:inline-block; margin:0;}
+h3 {font-size:18px; line-height:16px; float:left; width:100%; text-transform: uppercase; margin:0;}
+.gray-cont {background:#e0dcdc; padding:65px 0 60px;}
+.box {background:#fff; border:4px solid #231f20; padding:25px; max-width:800px; display:inline-block;}
+#main-wrap {margin-top:58px;}
 
 /*FONTS*/
-.headline, #header #nav li a, #mobile-nav li a, label, #footer {font-family: "ff-good-headline-web-pro-con",sans-serif; font-style: normal; font-weight: 500; letter-spacing: 1px;}
+.headline, #header #nav li a, #mobile-nav li a, label, #footer, h1, h2, h3, .button, .box {font-family: "ff-good-headline-web-pro-con",sans-serif; font-style: normal; font-weight: 500; letter-spacing: 1px;}
 
 /*HEADER*/
-#header {background:#27838a; height:58px;}
-#header:before { 
-  content: '';
-  position: absolute;
-  left: 33.3333333333%;
-  width: 100%; 
-  height: 100%; 
-  background-color: #231f20;
-  background-color: #231f20;
-  top: 0;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
+#header {background:#27838a; height:58px; position:fixed; top:0; left:0; width:100%; z-index:100;}
+#header:before {content: ''; position: absolute; left: 33.3333333333%; width: 100%; height: 100%; background-color: #231f20; background-color: #231f20; top: 0; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); transform: rotate(180deg);}
 #header #logo {float:left; padding:12px 25px 0 0; text-align:left; height:100%;}
 #header #nav {float:left;  padding:17px 0 0 25px; height:100%;}
 #header #nav li {float:left; margin-left:58px;}
@@ -58,37 +58,32 @@ label {font-size:18px; color:#27838a; text-transform:uppercase; position:relativ
 /*FOOTER*/
 #footer {border-top:5px solid #27838a; background:#231f20; padding:60px 0 75px; text-transform:uppercase; font-size:14px; color:#989190;}
 #footer span {font-size:42px; color:#fff; width:100%; float:left;}
-#footer #facebook {font-size:16px; color:#fff; float:left; border:4px solid #27838a; background:url(../images/facebook-sprite.png) no-repeat 20% 8px #27838a; padding:10px 0 10px 10%; border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;}
-#footer #facebook:hover {text-decoration:none; background-color:#231f20; color:#27838a; background-position:20% -21px;}
+#footer #facebook {background:url(../images/facebook-sprite.png) no-repeat 20% 8px #27838a; padding-left:10%; padding-right:0; text-align:left;}
+#footer #facebook:hover {background-position:20% -21px; background-color:#231f20;}
 #footer .footer-info .span4 {margin-bottom:40px;}
 #footer #copyright a {color:#989190;}
 #footer #copyright a:hover {color:#fff; text-decoration:none;}
 #footer #copyright {float:left; padding:14px 12px 0 25px;}
 
-/*HOMEPAGE*/
+/*LANDING*/
+#about {padding:128px 0 80px;}
+.non-profit-info {margin-top:25px; padding-bottom:40px; max-width:715px;}
+.box-button {position:absolute; bottom:0; width:100%; max-width:450px; bottom:-18px; left:calc(50% - 225px);}
+#slider {border-bottom:4px solid #231f20;}
+#slider img {width:100%; height:auto; }
+#slider .slide {width:100%; background-size:cover; background-position:center center; height:550px;}
+#slider .slide-overlay {opacity:.7; filter:alpha(opacity=70); background:#27838a; position:absolute; left:0; top:0; z-index:1; width:100%; height:550px;}
+#slider .slider-logo {position:absolute; z-index:10; top:80px; left:calc(50% - 146px);}
+.dog-shield {position:relative; float:left; width:100%; margin-top:-190px; z-index:2;}
+.box strong {font-size:20px; text-transform:uppercase; float:left; width:100%;}
+#services .service {margin-top:30px;  padding:0 25px;}
+#services .service .logo {margin-bottom:20px;}
+#services .service h3 {margin-bottom:15px;}
+#services .service:nth-child(2) {border-left:2px solid #cfcbca; border-right:2px solid #cfcbca;}
+#case-file .case-box {max-width:100%; box-shadow: inset 0 45px 0 0 #27838a; padding-top:70px; text-align:center; }
+#case-file .case-box .box-button {bottom:-24px;}
+#case-file .stamp {position:absolute; right:50px; top:15px;}
 
-/*RETINA*/
-@media (-webkit-min-device-pixel-ratio: 2) , (min-resolution: 192dpi) {
-	#footer #facebook {background:url(../images/facebook-sprite@2x.png) no-repeat 20% 8px #27838a; background-size:9px;}
-}
-
-
-@media screen and (max-width:1099px) {
-	.mobile {display:block;}
-	.desktop {display:none;}
-	.mid-cont {width:85%;}
-/*HEADER*/
-	#header:before {background:none;}
-	#header #logo {width:85%;}
-	#header #hamburger, #header #mobile-close {float:right; margin-top:17px; cursor:pointer;}
-	#mobile-nav {float:left; width:100%; background:#231f20; text-align:center; padding-top:30px;}
-	#mobile-nav li a {float:left; width:100%; margin-bottom:30px; color:#fff; text-transform:uppercase; font-size:24px;}
-
-}
-
-@media screen and (max-width:393px) {
-	#header #logo {padding-top:16px;}
-}
 
 /*GRIDPAK*/    
 .span1 {width:8.33333333333%;}
@@ -104,7 +99,53 @@ label {font-size:18px; color:#27838a; text-transform:uppercase; position:relativ
 .span11 {width:91.6666666667%;}
 .span12 {margin-left:0; width:100%; float:left;}
 .row {margin-left:-25px;}
-.col {padding-left:25px;}
+.col, .column {padding-left:25px;}
+
+/*RETINA*/
+@media (-webkit-min-device-pixel-ratio: 2) , (min-resolution: 192dpi) {
+	#footer #facebook {background:url(../images/facebook-sprite@2x.png) no-repeat 20% 8px #27838a; background-size:9px;}
+}
+
+
+@media screen and (max-width:1099px) {
+	.mobile {display:block;}
+	.desktop, #meet-michelle .photo {display:none;}
+	.mid-cont {width:85%;}
+  .col, .column {padding-left:0;}
+  .row {margin-left:0;}
+  .span2, .span3, .span4, .span6, .span8, .span9, .span10, #footer #copyright {width:100%;}
+  #footer {text-align:center;}
+  #footer #facebook {float:none; display:inline-block;}
+  .section {padding:45px 0;}
+  #main-wrap {margin-top:0;}
+/*HEADER*/
+  #header {position:relative; float:left;}
+	#header:before {background:none;}
+	#header #logo {width:85%;}
+	#header #hamburger, #header #mobile-close {float:right; margin-top:17px; cursor:pointer;}
+	#mobile-nav {float:left; width:100%; background:#231f20; text-align:center; padding-top:30px;}
+	#mobile-nav li a {float:left; width:100%; margin-bottom:30px; color:#fff; text-transform:uppercase; font-size:24px;}
+/*FOOTER*/
+  #footer .footer-info .span4, #footer .footer-logo {margin-bottom:30px;}
+/*LANDING*/
+  .pet-finder.button {display:inline-block; float:none; position:relative; left:0; bottom:0; margin-top:25px;}
+  .non-profit-info {padding-bottom:25px;}
+  #about {padding:25px 0 40px;}
+  #slider .slide, #slider .slide-overlay {height:400px;}
+  .dog-shield {margin:0 0 25px;}
+  #slider .slider-logo {top:55px;}
+  #services .service:nth-child(2) {border:none;}
+}
+
+@media screen and (max-width:393px) {
+	#header #logo {padding-top:16px;}
+  #footer span {font-size:35px;}
+  #slider .slide, #slider .slide-overlay {height:275px;}
+  #slider .slider-logo {top:40px; max-width:192px; left:calc(50% - 96px);}
+  .box strong {font-size:15px;}
+  h1 {font-size:36px; line-height:34px;}
+}
+
 
 
 
