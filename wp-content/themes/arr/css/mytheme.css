@@ -1,4 +1,4 @@
-body {margin:0; padding:0; width:100%; min-width:320px; font: normal 16px "abril-text"; font-weight: 400; color:#231f20; /*overflow-x:hidden;*/}
+body {margin:0; padding:0; width:100%; min-width:320px; font: normal 16px "abril-text"; font-weight: 400; color:#231f20; background:#231f20; /*overflow-x:hidden;*/}
 a {text-decoration:none; color:#27838a; outline:0;}
 a:hover {text-decoration: underline;}
 a img {border:0;}
@@ -23,26 +23,27 @@ mark {background:#fff;}
 *:focus {outline:none;}
 /*REUSABLE*/
 .mid-cont {position:relative; width:90%; margin:auto; max-width:1700px;}
-#main-wrap .mid-cont {max-width:1100px}
+/*#main-wrap .mid-cont {max-width:1100px}*/
 .cont {position:relative; float:left; width:100%;}
-.hidden, .mobile, #mobile-nav, #mobile-close {display:none;}
+.hidden, .mobile, #mobile-nav, #mobile-close, .case-box .stamp, .active-note {display:none;}
 .last {margin-right:0;}
 .desktop {display:block;}
 .center, #about {text-align:center;}
 .intro {text-align:left;}
 .section {padding:80px 0;}
 label {font-size:18px; color:#27838a; text-transform:uppercase; position:relative; float:left; width:100%;}
-.button {background-color:#27838a; font-size:16px; color:#fff; float:left; text-align:center; max-width:300px; border:4px solid #27838a;  padding:10px 35px; border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;}
+.button {background-color:#27838a; font-size:16px; color:#fff; float:left; text-align:center; max-width:300px; border:4px solid #27838a;  padding:10px 35px; border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px; text-transform:uppercase;}
 .button:hover {text-decoration:none; background-color:#231f20; color:#27838a;}
 h1 {font-size:42px; float:left; width:100%; line-height:40px; margin:0 0 35px;}
 h2 {font-size:28px; line-height:26px; display:inline-block; margin:0;}
-h3 {font-size:18px; line-height:16px; float:left; width:100%; text-transform: uppercase; margin:0;}
-.gray-cont {background:#e0dcdc; padding:65px 0 60px;}
+h3 {font-size:20px; line-height:18px; float:left; width:100%; text-transform: uppercase; margin:0;}
+h4 {font-size:18px; line-height:16px; float:left; width:100%; text-transform: uppercase; margin:0;}
+.gray-cont, .single-casefiles #main-wrap {background:#e0dcdc; padding:65px 0 60px;}
 .box {background:#fff; border:4px solid #231f20; padding:25px; max-width:800px; display:inline-block;}
-#main-wrap {margin-top:58px;}
+#main-wrap {margin-top:58px; background:#fff;}
 
 /*FONTS*/
-.headline, #header #nav li a, #mobile-nav li a, label, #footer, h1, h2, h3, .button, .box {font-family: "ff-good-headline-web-pro-con",sans-serif; font-style: normal; font-weight: 500; letter-spacing: 1px;}
+.headline, #header #nav li a, #mobile-nav li a, label, #footer, h1, h2, h3, h4, .button, .box, .sidebar .case-update, strong {font-family: "ff-good-headline-web-pro-con",sans-serif; font-style: normal; font-weight: 500; letter-spacing: 1px;}
 
 /*HEADER*/
 #header {background:#27838a; height:58px; position:fixed; top:0; left:0; width:100%; z-index:100;}
@@ -80,10 +81,26 @@ h3 {font-size:18px; line-height:16px; float:left; width:100%; text-transform: up
 #services .service .logo {margin-bottom:20px;}
 #services .service h3 {margin-bottom:15px;}
 #services .service:nth-child(2) {border-left:2px solid #cfcbca; border-right:2px solid #cfcbca;}
-#case-file .case-box {max-width:100%; box-shadow: inset 0 45px 0 0 #27838a; padding-top:70px; text-align:center; }
+.case-box {max-width:100%; box-shadow: inset 0 45px 0 0 #27838a; padding-top:70px; text-align:center; }
 #case-file .case-box .box-button {bottom:-24px;}
-#case-file .stamp {position:absolute; right:50px; top:15px;}
+.case-box.active .stamp {position:absolute; right:50px; top:15px; display:block;}
 
+/*SINGLE CASE*/
+#single-case {margin:65px 0 70px; padding:110px 60px 75px;}
+.single-casefiles .dog-shield {margin-top:-145px;}
+.cont-left, .sidebar {text-align:left;}
+.case-box.active .active-note {display:block; padding:15px 20px 20px; margin:35px 0 25px 0;}
+.cont-left {padding-right:25px; border-right:2px solid #cfcbca;}
+.cont-left p {font: normal 16px "abril-text";}
+.sidebar {float:right !important;}
+.sidebar .sidebar-top {padding:0 0 50px 15px; border-bottom:2px solid #cfcbca;}
+.sidebar .sidebar-bottom {padding:50px 0 40px 15px;}
+.sidebar .case-update, .sidebar .reports p {padding:15px 10px 20px; font-size:18px; color:#231f20; margin:0;}
+.sidebar .case-update:nth-of-type(1), .sidebar .reports p:first-child {margin-top:20px;}
+.sidebar .case-update:nth-child(even), .sidebar .reports p:nth-child(odd) {background:#f4f4f4;}
+.sidebar .case-update h3, .sidebar .reports strong {color:#98918f; margin-bottom:5px;}
+.sidebar .button {max-width:100%; width:100%; margin:15px 0 0;}
+.sidebar .reports a {color:#231f20;}
 
 /*GRIDPAK*/    
 .span1 {width:8.33333333333%;}
@@ -109,9 +126,9 @@ h3 {font-size:18px; line-height:16px; float:left; width:100%; text-transform: up
 
 @media screen and (max-width:1099px) {
 	.mobile {display:block;}
-	.desktop, #meet-michelle .photo {display:none;}
+	.desktop, #meet-michelle .photo, .case-box.active .stamp {display:none;}
 	.mid-cont {width:85%;}
-  .col, .column {padding-left:0;}
+  .col, .column, .sidebar .sidebar-bottom, .sidebar .sidebar-top {padding-left:0;}
   .row {margin-left:0;}
   .span2, .span3, .span4, .span6, .span8, .span9, .span10, #footer #copyright, .column {width:100% !important;}
   #footer {text-align:center;}
@@ -136,6 +153,12 @@ h3 {font-size:18px; line-height:16px; float:left; width:100%; text-transform: up
   .dog-shield {margin:0 0 25px;}
   #slider .slider-logo {top:55px;}
   #services .service:nth-child(2) {border:none;}
+/*SINGLE CASE*/
+  .cont-left {padding-right:0; border:none;}
+  #single-case {padding:0; border:none; box-shadow:none; -moz-box-shadow:none; -webkit-box-shadow:none; margin:0;}
+  .single-casefiles #main-wrap {background:#fff;}
+  .sidebar .sidebar-top {border-bottom:3px solid #e0dcdc; border-top:3px solid #e0dcdc; padding:35px 0; margin-bottom:35px;}
+  .sidebar .case-update:nth-of-type(1) {background:none;}
 }
 
 @media screen and (max-width:393px) {

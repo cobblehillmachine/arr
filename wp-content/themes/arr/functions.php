@@ -493,7 +493,177 @@ function create_post_type() {
 	);
   
   	register_post_type( 'Services', $args1);
+
+  	$args2 = array(
+		'labels' => array(
+			'name' => __( 'Case Files' ),
+			'singular_name' => __( 'Case File' )
+		),
+		'public' => true,
+		//'has_archive' => true,
+		'menu_icon' => 'dashicons-portfolio',
+		'rewrite' => array('with_front' => false, 'slug' => 'case-file'),
+		'supports' => array( 'title', 'editor' )
+	);
+  
+  	register_post_type( 'Case Files', $args2);
+
+  	$args3 = array(
+		'labels' => array(
+			'name' => __( 'Case Updates' ),
+			'singular_name' => __( 'Case Update' )
+		),
+		'public' => true,
+		//'has_archive' => true,
+		'menu_icon' => 'dashicons-update',
+		'rewrite' => array('with_front' => false, 'slug' => 'case-update'),
+		'supports' => array( 'title', 'editor' )
+	);
+  
+  	register_post_type( 'Case Updates', $args3);
+
+  flush_rewrite_rules();
 }
 
 
+/* Hook meta box to just the 'place' post type. */
+add_action( 'add_meta_boxes_caseupdates', 'my_add_meta_boxes' );
+
+/* Creates the meta box. */
+function my_add_meta_boxes( $post ) {
+
+    add_meta_box(
+        'my-caseupdates-parent',
+        __( 'Case File', 'example-textdomain' ),
+        'my_caseupdates_parent_meta_box',
+        $post->post_type,
+        'side',
+        'core'
+    );
+}
+
+/* Displays the meta box. */
+function my_caseupdates_parent_meta_box( $post ) {
+
+    $parents = get_posts(
+        array(
+            'post_type'   => 'casefiles', 
+            'orderby'     => 'title', 
+            'order'       => 'ASC', 
+            'numberposts' => -1 
+        )
+    );
+
+    if ( !empty( $parents ) ) {
+
+        echo '<select name="parent_id" class="widefat">'; // !Important! Don't change the 'parent_id' name attribute.
+
+        foreach ( $parents as $parent ) {
+            printf( '<option value="%s"%s>%s</option>', esc_attr( $parent->ID ), selected( $parent->ID, $post->post_parent, false ), esc_html( $parent->post_title ) );
+        }
+
+        echo '</select>';
+    }
+}
+
+//add the case file parent in the column of case update dashboard
+
+// add_action("manage_posts_custom_column",  "caseupdates_custom_columns");
+// add_filter("manage_caseupdates_posts_columns", "caseupdates_edit_columns");
+ 
+// function caseupdates_edit_columns($columns){
+//     $columns = array(
+//         "cb" => "<input type=\"checkbox\" />",
+//         "title" => "Case Update Title",
+//         "case_file" => "Case File associated with",
+//   );
+//   return $columns;
+// }
+ 
+// function caseupdates_custom_columns($column){
+//     global $post;
+    
+//     $custom = get_post_custom();
+ 
+//     switch ($column) {
+ 
+//     case "case_file":
+//       $parents = get_posts(
+//         array(
+//             'post_type'   => 'casefiles', 
+//             'orderby'     => 'title', 
+//             'order'       => 'ASC', 
+//             'numberposts' => -1 
+//         )
+//     );
+
+//     if ( !empty( $parents ) ) {
+
+//         //echo '<select name="parent_id" class="widefat">'; // !Important! Don't change the 'parent_id' name attribute.
+
+//         foreach ( $parents as $parent ) {
+//             printf( '<div %s>%s</div>',  selected( $parent->ID, $post->post_parent, false ), esc_html( $parent->post_title ) );
+//         }
+
+//         //echo '</select>';
+//     }
+            
+//             break;
+ 
+//     }
+// }
+
+
+// add_filter( 'manage_edit-caseupdates_columns', 'my_edit_caseupdates_columns' ) ;
+
+// function my_edit_caseupdates_columns( $columns ) {
+
+// 	$columns = array(
+// 		'cb' => '<input type="checkbox" />',
+// 		'title' => __( 'Case Update Title' ),
+// 		'case_file' => __( 'Case File associated with' )
+// 	);
+
+// 	return $columns;
+// }
+
+// add_action( 'manage_caseupdates_posts_custom_column', 'my_manage_caseupdates_columns', 10, 2 );
+
+// function my_manage_caseupdates_columns( $column, $post_id ) {
+// 	global $post;
+
+// 	switch( $column ) {
+
+// 		/* If displaying the 'genre' column. */
+// 		case 'case_file' :
+
+// 			/* Get the genres for the post. */
+// 			$terms = get_post($post->post_parent);
+// 			$parents = get_posts(
+//         array(
+//             'post_type'   => 'casefiles', 
+//             'orderby'     => 'title', 
+//             'order'       => 'ASC', 
+//             'numberposts' => -1 
+//         ));
+
+			
+				
+
+// 				/* Loop through each term, linking to the 'edit posts' page for the specific term. */
+// 				foreach ( $parents as $parent ) {
+					
+// 						//esc_url( add_query_arg( array( 'post_type' => 'Case Updates', 'caseupdates' => $parent->slug ), 'edit.php' ) ),
+// 						echo $parent->post_title;
+					
+// 				}
+
+
+// 			break;
+
+// 		/* Just break out of the switch statement for everything else. */
+// 		default :
+// 			break;
+// 	}
+// }
 

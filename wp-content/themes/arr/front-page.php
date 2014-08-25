@@ -13,7 +13,7 @@
 	<div id="about" class="cont section">
 		<div class="mid-cont">
 			<div class="dog-shield"><img src="<?php echo get_template_directory_uri(); ?>/images/dog-shield.png" /></div>
-			<h3><?php the_field('small_tagline'); ?></h3>
+			<h4><?php the_field('small_tagline'); ?></h4>
 			<h1><?php the_field('big_tagline'); ?></h1>
 			<div class="intro row">
 				<?php the_field('intro_paragraph'); ?>
@@ -28,7 +28,7 @@
 	</div>
 	<div id="services" class="cont gray-cont center">
 		<div class="mid-cont">
-			<h3>services</h3>
+			<h4>services</h4>
 			<?php $the_query = new WP_Query( 'page_id=25' ); if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				<h1><?php echo get_the_content(); ?></h1>
 			<?php endwhile; endif; wp_reset_postdata(); ?>
@@ -38,7 +38,7 @@
 				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="service span4 col">
 						<div class="logo"><?php the_post_thumbnail('full'); ?></div>
-						<h3><?php the_title(); ?></h3>
+						<h4><?php the_title(); ?></h4>
 						<h2><?php echo get_the_content(); ?></h2>
 					</div>
 				<?php endwhile; wp_reset_query(); ?>
@@ -53,7 +53,7 @@
 					<?php the_post_thumbnail('full'); ?>
 				</div>
 				<div class="bio span6 col">
-					<h3><?php the_field('small_tagline'); ?></h3>
+					<h4><?php the_field('small_tagline'); ?></h4>
 					<h1><?php the_field('big_tagline'); ?></h1>
 					<div class="cont">
 						<?php the_field('intro_paragraph'); ?>
@@ -72,21 +72,20 @@
 	</div>
 	<div id="case-file" class="cont gray-cont">
 		<div class="mid-cont">
-			<?php query_posts(array('posts_per_page'=>1)); while (have_posts()) : the_post(); ?>
+			<?php query_posts(array('post_type' => 'Case Files', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 1)); ?>
 
-					<div class="cont box case-box">
-						<div class="stamp desktop"><img src="<?php echo get_template_directory_uri(); ?>/images/active-case-stamp.png" /></div>
-						<h3>case file</h3>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<div class="cont box case-box <?php the_field('case_status'); ?>">
+						<div class="stamp"><img src="<?php echo get_template_directory_uri(); ?>/images/active-case-stamp.png" /></div>
+						<h4>case file</h4>
 						<h1><?php the_title(); ?></h1>
 						<div class="intro">
-							<!--<?php// the_excerpt(); ?>-->
-							<?php the_field('case_summary'); ?>
+							<?php the_field('case_excerpt'); ?>
 						</div>
 						
-					
+					<a class="button box-button" href="<?php the_permalink(); ?>">LEARN MORE ABOUT THIS CASE IN OUR CASE FILE</a>
 					</div>
-					<!-- <a class="button box-button" href="<?php the_permalink(); ?>">LEARN MORE ABOUT THIS CASE IN OUR CASE FILE</a> -->
-			<?php endwhile; wp_reset_query(); ?>
+				<?php endwhile; wp_reset_query(); ?>
 		</div>
 	</div>
 <?php get_footer(); ?>
