@@ -19,7 +19,8 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script type="text/javascript" src="//use.typekit.net/vtk6pun.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -40,7 +41,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> id="<?php echo  strtolower(str_replace(' ','-',get_the_title())); ?>">
+<body <?php body_class(); ?>>
 	<div id="header">
 		<div class="mid-cont">
 			<a id="logo" href="/" class="span4"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" /></a>

@@ -58,7 +58,7 @@
 					<div class="cont">
 						<?php the_field('intro_paragraph'); ?>
 					</div>
-					<?php if ( get_post_meta($post->ID, 'pfd_file', true) ) { ?>
+					<?php if ( get_post_meta($post->ID, 'pdf_file', true) ) { ?>
 					<a class="button pdf-file" target="_blank" href="<?php the_field('pdf_file'); ?>"><?php the_field('pdf_title'); ?></a>
 					<?php } ?>
 				</div>

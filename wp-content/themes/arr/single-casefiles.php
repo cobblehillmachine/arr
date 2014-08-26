@@ -10,14 +10,19 @@
 					<div class="desktop">
 						<h3>case updates</h3>
 						<?php query_posts(array('post_type' => 'Case Updates', 'order' => 'ASC', 'posts_per_page' => 100, 'post_parent' => $post->ID)); ?>
-
-						<?php while ( have_posts() ) : the_post(); ?>
-							<a class="case-update cont" href="<?php the_permalink(); ?>">
-								<h3><?php echo get_the_date(); ?></h3>
-								<?php the_title(); ?>
-							</a>
-						<?php endwhile; wp_reset_query(); ?>
-						<a class="button" href="#">view all updates</a>
+							<?php if(  have_posts() ) { ?>
+								<?php while ( have_posts() ) : the_post(); ?>
+									<a class="case-update cont" href="<?php the_permalink(); ?>">
+										<h3><?php echo get_the_date(); ?></h3>
+										<?php the_title(); ?>
+									</a>
+								<?php endwhile; wp_reset_query(); ?>
+								<a class="button" href="#">view all updates</a>
+							<?php } else { ?>
+								<?php $the_query = new WP_Query( 'page_id=6' ); if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+									<?php the_field('no_update_message'); ?>
+								<?php endwhile; endif; wp_reset_query(); ?>
+							<?php } ?>
 					</div>
 					<div class="mobile">
 						<h3>most recent case update</h3>
@@ -32,7 +37,7 @@
 						<a class="button" href="#">view all updates</a>
 					</div>
 				</div>
-				<div class="sidebar-bottom cont">
+				<div class="sidebar-bottom cont desktop">
 					<h3>media reports</h3>
 					<div class="reports">
 						<?php the_field('media_reports'); ?>
@@ -58,10 +63,12 @@
 					<div class="info cont">	
 						<h3>your resources</h3>
 						<?php the_field('your_resources'); ?>
+						<a href="<?php the_field('donation_url'); ?>" class="button span6 donate-btn" target="_blank"><?php the_field('donation_button'); ?></a>
 					</div>
 				<?php endwhile; endif; wp_reset_query(); ?>
 				<div class="info cont">	
 					<h3>photographs</h3>
+					<div class="row"><?php the_field('photographs'); ?></div>
 				</div>
 			</div>
 		</div>

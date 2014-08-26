@@ -514,9 +514,9 @@ function create_post_type() {
 			'singular_name' => __( 'Case Update' )
 		),
 		'public' => true,
-		//'has_archive' => true,
+		'has_archive' => true,
 		'menu_icon' => 'dashicons-update',
-		'rewrite' => array('with_front' => false, 'slug' => 'case-update'),
+		'rewrite' => array('with_front' => false, 'slug' => 'case-updates'),
 		'supports' => array( 'title', 'editor' )
 	);
   
@@ -524,6 +524,23 @@ function create_post_type() {
 
   flush_rewrite_rules();
 }
+
+//Adds gallery shortcode defaults of size="full" and columns="2" 
+function amethyst_gallery_atts( $out, $pairs, $atts ) {
+   
+    $atts = shortcode_atts( array(
+        'columns' => '2',
+        'size' => 'full',
+         ), $atts );
+
+    $out['columns'] = $atts['columns'];
+    $out['size'] = $atts['size'];
+
+    return $out;
+
+}
+add_filter( 'shortcode_atts_gallery', 'amethyst_gallery_atts', 10, 3 );
+
 
 
 /* Hook meta box to just the 'place' post type. */
