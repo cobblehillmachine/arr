@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 	<div class="mid-cont">
-		<div id="single-case" class="cont box case-box <?php the_field('case_status'); ?>">
+		<div class="case-wrap cont box case-box <?php the_field('case_status'); ?>">
 			<div class="dog-shield desktop"><img src="<?php echo get_template_directory_uri(); ?>/images/dog-shield.png" /></div>
 			<div class="stamp"><img src="<?php echo get_template_directory_uri(); ?>/images/active-case-stamp.png" /></div>
 			<h4>case file</h4>
@@ -28,13 +28,21 @@
 						<h3>most recent case update</h3>
 						<?php query_posts(array('post_type' => 'Case Updates', 'order' => 'ASC', 'posts_per_page' => 1, 'post_parent' => $post->ID)); ?>
 
-						<?php while ( have_posts() ) : the_post(); ?>
-							<a class="case-update cont" href="<?php the_permalink(); ?>">
-								<h3><?php echo get_the_date(); ?></h3>
-								<?php the_title(); ?>
-							</a>
-						<?php endwhile; wp_reset_query(); ?>
-						<a class="button" href="#">view all updates</a>
+						<?php if(  have_posts() ) { ?>
+								<?php while ( have_posts() ) : the_post(); ?>
+									<a class="case-update cont" href="<?php the_permalink(); ?>">
+										<h3><?php echo get_the_date(); ?></h3>
+										<?php the_title(); ?>
+									</a>
+									<a class="button" href="#">view all updates</a>
+								<?php endwhile; wp_reset_query(); ?>
+								<a class="button" href="#">view all updates</a>
+							<?php } else { ?>
+								<?php $the_query = new WP_Query( 'page_id=6' ); if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+									<?php the_field('no_update_message'); ?>
+								<?php endwhile; endif; wp_reset_query(); ?>
+							<?php } ?>
+						
 					</div>
 				</div>
 				<div class="sidebar-bottom cont desktop">

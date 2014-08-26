@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 	<div class="mid-cont">
-		<div id="single-case" class="cont box case-box <?php the_field('case_status'); ?>">
+		<div class="case-wrap cont box case-box <?php the_field('case_status'); ?>">
 			<div class="dog-shield desktop"><img src="<?php echo get_template_directory_uri(); ?>/images/dog-shield.png" /></div>
 			<div class="stamp"><img src="<?php echo get_template_directory_uri(); ?>/images/active-case-stamp.png" /></div>
 			<h4>case update:&nbsp;<span><?php echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent ); ?></span></h4>

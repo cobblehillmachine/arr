@@ -39,7 +39,7 @@
 					<div class="service span4 col">
 						<div class="logo"><?php the_post_thumbnail('full'); ?></div>
 						<h4><?php the_title(); ?></h4>
-						<h2><?php echo get_the_content(); ?></h2>
+						<div class="service-info"><?php echo get_the_content(); ?></div>
 					</div>
 				<?php endwhile; wp_reset_query(); ?>
 			</div>

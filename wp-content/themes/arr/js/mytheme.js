@@ -4,6 +4,7 @@ $(document).ready(function() {
   if(window.location.href == "http://arr.local"){
     scrollToLandingNav();
   }
+  $('.case-wrap .case-cont:nth-of-type(2n+2)').after('<div class="line"></div>');
  
 
 });
