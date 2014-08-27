@@ -6,15 +6,13 @@
 				<div class="slide " style="background-image: url('<?php echo $image[0]; ?>')"></div>
 			<?php endif; ?>
 		<?php endwhile; wp_reset_query();?>
-		
-		<div class="slide-overlay"></div>
 		<div class="slider-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/tagline-graphic.png" /></div>
 	</div>
 	<div id="about" class="cont section">
 		<div class="mid-cont">
 			<div class="dog-shield"><img src="<?php echo get_template_directory_uri(); ?>/images/dog-shield.png" /></div>
 			<h4><?php the_field('small_tagline'); ?></h4>
-			<h1><?php the_field('big_tagline'); ?></h1>
+			<h1><span><?php the_field('big_tagline'); ?></span></h1>
 			<div class="intro row">
 				<?php the_field('intro_paragraph'); ?>
 			</div>
