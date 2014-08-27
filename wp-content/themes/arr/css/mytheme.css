@@ -140,6 +140,10 @@ span.related {font-size:24px;}
 	#footer #facebook span {background:url(../images/facebook-sprite@2x.png) no-repeat 0 0; background-size:9px;}
 }
 
+/*REGULAR WEBKIT*/
+@media(-webkit-min-device-pixel-ratio:0) {
+  #meet-michelle .expertise li {text-indent:-18px;}
+}
 
 @media screen and (max-width:1099px) {
 	.mobile {display:block;}
