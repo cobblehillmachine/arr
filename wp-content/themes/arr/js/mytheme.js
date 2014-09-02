@@ -47,9 +47,12 @@ function scrollToLandingNav() {
   });
   $('.menu-main-nav-container li a').each(function() {
     var id = $(this).attr('rel');
-    $(this).on({
-      click: function(e) { e.preventDefault(); $('html,body').unbind().animate({scrollTop: $('#' + id).offset().top-75},'slow');}
-    });
+    // console.log(this.text)
+    if (this.text !== 'Case Files') {
+      $(this).on({
+        click: function(e) { e.preventDefault(); $('html,body').unbind().animate({scrollTop: $('#' + id).offset().top-75},'slow');}
+      });
+    }
   });
 }
 
