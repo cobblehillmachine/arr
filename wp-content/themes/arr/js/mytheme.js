@@ -10,9 +10,9 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-  if ($(window).width() > 1099) {
+  if ($(window).width() > 1172) {
     $('#mobile-nav, #hamburger, #mobile-close').hide();
-  } else if ($(window).width() <= 1099 && $('#mobile-close').css('display') == 'block') {   
+  } else if ($(window).width() <= 1172 && $('#mobile-close').css('display') == 'block') {   
     $('#hamburger').hide();
   } else {
     $('#hamburger').show();
@@ -47,7 +47,6 @@ function scrollToLandingNav() {
   });
   $('.menu-main-nav-container li a').each(function() {
     var id = $(this).attr('rel');
-    // console.log(this.text)
     if (this.text !== 'Case Files') {
       $(this).on({
         click: function(e) { e.preventDefault(); $('html,body').unbind().animate({scrollTop: $('#' + id).offset().top-75},'slow');}
