@@ -63,11 +63,6 @@
 					<?php the_field('case_summary'); ?>
 				</div>
 				<?php $the_query = new WP_Query( 'page_id=6' ); if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					<div class="info cont">			
-						<h3>how you can get involved</h3>
-						<?php the_field('get_involved'); ?>
-						<?php the_field('expertise_areas'); ?>
-					</div>
 					<div class="info cont">	
 						<h3>your resources</h3>
 						<?php the_field('your_resources'); ?>
