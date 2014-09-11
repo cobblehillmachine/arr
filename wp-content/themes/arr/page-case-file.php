@@ -10,7 +10,7 @@
 							<a href="<?php the_permalink(); ?>" class="cont-link cont">
 								<div class="table">
 									<div class="table-cell">
-										<h3><?php echo get_the_date(); ?></h3>
+										<h3><?php the_field("optional_date_of_case") ?></h3>
 										<h2><?php the_title(); ?></h2>			
 										<div class="button">read full case</div>
 									</div>
