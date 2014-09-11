@@ -14,10 +14,22 @@
 										<h2><?php the_title(); ?></h2>			
 										<div class="button">read full case</div>
 									</div>
+
 								</div>
 							</a>
 						</div>
 					<?php endwhile; wp_reset_query(); ?>
+					<div class="span6 case-cont">
+						<a href="<?php the_field("pdf_file"); ?>" target=_blank class="cont-link cont">
+							<div class="table">
+								<div class="table-cell">
+									<h2>See More Past Cases</h2>			
+									<div class="button">Download PDF</div>
+								</div>
+
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
