@@ -1,6 +1,6 @@
 $(document).ready(function() {
   showMobileNav();
-  $('.intro').columnize({ columns: 2 });
+  $('.intro').columnize({ columns: 2, buildOnce: true });
   if($('body').hasClass('home')) {
     scrollToLandingNav();
   }
@@ -18,8 +18,17 @@ $(window).resize(function() {
     $('#hamburger').show();
   }
 
+
 });
 
+function responsiveColumnizer() {
+  if ($(window).width() > 1172) {
+    $('.intro').columnize({ columns: 2 });
+  } else {
+    $('.column > *').unwrap();
+    // $('.intro').columnize({ columns: 1 });
+  }
+}
 
 function showMobileNav() {
   $('#hamburger').on({
