@@ -22,7 +22,7 @@
 		doneFunc : function(){},
 		// if the content should be columnized into a 
 		// container node other than it's own node
-		target : false,
+		target : false,c
 		// re-columnizing when images reload might make things
 		// run slow. so flip this to true if it's causing delays
 		ignoreImageLoading : true,

@@ -36,7 +36,6 @@
 									</a>
 									<a class="button" href="#">view all updates</a>
 								<?php endwhile; wp_reset_query(); ?>
-								<a class="button" href="#">view all updates</a>
 							<?php } else { ?>
 								<?php $the_query = new WP_Query( 'page_id=6' ); if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
 									<?php the_field('no_update_message'); ?>
