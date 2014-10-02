@@ -41,7 +41,11 @@
 					</div>
 				<?php endwhile; wp_reset_query(); ?>
 			</div>
-			
+			<?php $the_query = new WP_Query( 'page_id=25' ); if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+			<p class="button-wrapper">
+				<a class="button pdf-file" target="_blank" href="<?php the_field('services_pdf'); ?>">READ MORE ABOUT OUR SERVICES</a>
+			</p>
+			<?php endwhile; endif; wp_reset_postdata(); ?>
 		</div>
 	</div>
 	<div id="meet-michelle" class="cont section">
