@@ -181,6 +181,8 @@ span.related {font-size:24px;}
   .dog-shield {margin:0 0 25px;}
   #slider .slider-logo {top:55px;}
   #services .service:nth-child(2) {border:none; padding-bottom:0;}
+  #services .button-wrapper .button { top: 0; left: 50%;  position: absolute; transform: translate(-50%,0); margin: 0 auto;}
+
   #case-file .case-box {margin-bottom:60px;}
   .cont-left .info {margin-bottom:35px;}
   #services .service {padding:0 15px;}
@@ -199,6 +201,10 @@ span.related {font-size:24px;}
 
 @media screen and (max-width:767px) {
   #case-file .case-box .box-button {bottom:-90px; left:0;}
+}
+
+@media screen and (max-width:610px) {
+  #services .button-wrapper .button { width: 80%;}
 }
 
 @media screen and (max-width:393px) {
