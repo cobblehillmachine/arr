@@ -24,7 +24,7 @@
 			</a>			
 		</div>
 	</div>
-	<div id="services" class="cont gray-cont center">
+	<div class="cont gray-cont center">
 		<div class="mid-cont">
 			<h4>services</h4>
 			<?php $the_query = new WP_Query( 'page_id=25' ); if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -48,29 +48,9 @@
 			<?php endwhile; endif; wp_reset_postdata(); ?>
 		</div>
 	</div>
-	<div id="meet-michelle" class="cont section">
-		<div class="mid-cont">
-			<?php $the_query = new WP_Query( 'page_id=19' ); if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-				<div class="photo span2">
-					<?php the_post_thumbnail('full'); ?>
-				</div>
-				<div class="bio span6 col">
-					<h4><?php the_field('small_tagline'); ?></h4>
-					<h1><?php the_field('big_tagline'); ?></h1>
-					<div class="cont">
-						<?php the_field('intro_paragraph'); ?>
-					</div>
-					<?php if ( get_post_meta($post->ID, 'pdf_file', true) ) { ?>
-					<a class="button pdf-file" target="_blank" href="<?php the_field('pdf_file'); ?>"><?php the_field('pdf_title'); ?></a>
-					<?php } ?>
-				</div>
-				<div class="expertise span4 col">
-					<div class="box">
-						<?php the_field('expertise_areas'); ?>
-					</div>
-				</div>
-			<?php endwhile; endif; wp_reset_postdata(); ?>
-		</div>
+	<div class="cont section testimonial mid-cont">
+		<p class="content">“Valiant Animal Rescue & Relief is on the leading edge of animal cruelty work and has a strong reputation within the veterinarian community.  What makes their work so special is that it is done with exceptional professionalism, enormous amounts of passion, and credibility that can be counted on.”</p>
+		<h4 class="author">–Kelli Klein, DVM</h4>
 	</div>
 	<div id="case-file" class="cont gray-cont">
 		<div class="mid-cont">

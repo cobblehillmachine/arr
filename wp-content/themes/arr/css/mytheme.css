@@ -4,14 +4,13 @@ a:hover {text-decoration: underline;}
 a img {border:0;}
 img {vertical-align:top; max-width:100%;}
 ul {list-style:none; padding:0; margin:0;}
-p {margin:0 0 25px 0; float:left; width:100%;}
+p {margin:0 0 25px 0; /*float:left;*/ width:100%;}
 ul, li, ol, fieldset {list-style:none; padding:0; margin:0; border:none;}
 * {box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
 *:focus {outline:none;}
 
 /*REUSABLE*/
-.mid-cont {position:relative; width:90%; margin:auto; max-width:1700px;}
-.cont, .cont-left .info .gallery, blockquote {position:relative; float:left; width:100%;}
+.mid-cont {position:relative; width:83%; margin:auto; max-width:1700px;}
 .hidden, .mobile, #mobile-nav, #mobile-close, .case-box .stamp, .active-note {display:none;}
 .last {margin-right:0;}
 .desktop {display:block;}
@@ -25,7 +24,8 @@ h1 {font-size:42px; float:left; width:100%; line-height:40px; margin:0 0 45px; l
 h2 {font-size:32px; line-height:30px; float:left; width:100%; margin:0 0 30px;}
 h3 {font-size:20px; line-height:18px; float:left; width:100%; text-transform: uppercase; margin:0 0 25px;}
 h4 {font-size:18px; line-height:16px; float:left; width:100%; text-transform: uppercase; margin:0;}
-.gray-cont, #main-wrap {background:#e0dcdc; padding:65px 0 60px;}
+#main-wrap {background:#e0dcdc; /*padding:65px 0 60px;*/}
+.gray-cont {  background:#e0dcdc; padding:65px 0 60px;}
 .box {background:#fff; border:4px solid #231f20; padding:25px; max-width:800px; display:inline-block;}
 .fluid-img, .gallery .gallery-item img {width:100%; height:auto;}
 blockquote {margin:20px 0; padding:20px 0 0 30px; border-left:2px solid #27838a;}
@@ -34,7 +34,7 @@ blockquote {margin:20px 0; padding:20px 0 0 30px; border-left:2px solid #27838a;
 .table .table-cell {display:table-cell; height:100%; vertical-align:middle;}
 
 /*FONTS*/
-.headline, #header #nav li a, #mobile-nav li a, label, #footer, h1, h2, h3, h4, .button, .sidebar .case-update, strong, #services .service-info, .non-profit-info, #meet-michelle .expertise, .case-box.active .active-note, .sidebar
+.headline, #header #nav li a, #mobile-nav li a, label, #footer, h1, h2, h3, h4, .button, .sidebar .case-update, strong,.service-info, .non-profit-info, #meet-michelle .expertise, .case-box.active .active-note, .sidebar
  {font-family: "ff-good-headline-web-pro-con",sans-serif; font-style: normal; font-weight: 500; letter-spacing: 1px;}
 
 /*HEADER*/
@@ -49,16 +49,11 @@ blockquote {margin:20px 0; padding:20px 0 0 30px; border-left:2px solid #27838a;
 #header #nav .menu-main-nav-container {float:right;}
 
 /*FOOTER*/
-#footer {border-top:5px solid #27838a; background:#231f20; padding:60px 0 75px; text-transform:uppercase; font-size:14px; color:#989190;}
-#footer .contact-info span {font-size:42px; color:#fff; width:100%; float:left;}
-#footer #facebook {max-width:300px;}
-#footer #facebook span {background:url(../images/facebook-sprite.png) no-repeat 0 0; text-align:center; padding:0 0 4px 25px;}
-#footer #facebook:hover span {background-position:0 -29px;}
-#footer #facebook:hover {background-color:#231f20;}
-#footer .footer-info .span4 {margin-bottom:40px;}
-#footer #copyright a {color:#989190;}
-#footer #copyright a:hover {color:#fff; text-decoration:none;}
-#footer #copyright {float:left; padding:14px 12px 0 25px;}
+#footer {border-top:5px solid #27838a; background:#231f20; text-transform:uppercase; font-size:14px; color:#989190;height:78px; text-align:center;}
+#footer .mid-cont div {padding-top:28px;}
+#footer .mid-cont span {  padding: 0 5px}
+#footer a {color:#989190;}
+#footer a:hover {color:#fff; text-decoration:none;}
 
 /*LANDING*/
 .home #main-wrap {margin-top:0; padding:58px 0 0; background:#fff;}
@@ -71,20 +66,23 @@ blockquote {margin:20px 0; padding:20px 0 0 30px; border-left:2px solid #27838a;
 #slider .slider-logo {position:absolute; z-index:10; top:150px; left:calc(50% - 146px);}
 .dog-shield {position:relative; float:left; width:100%; margin-top:-190px; z-index:2;}
 .box strong {font-size:20px; text-transform:uppercase; float:left; width:100%;}
-#services .service {margin-top:30px;  padding:0 65px;}
-#services .service .logo {margin-bottom:20px;}
-#services .service h3 {margin-bottom:15px;}
-#services .service:nth-child(2) {border-left:2px solid #cfcbca; border-right:2px solid #cfcbca; padding-bottom:50px;}
-#services .service-info {font-size:28px; line-height:26px; display: inline-block;}
-#services .button-wrapper {  margin-top: 30px;  position: relative}
-#services .button-wrapper .button { top: 0; left: 50%;  position: absolute; transform: translate(-55%,0); margin: 0 auto;}
-#services .button-wrapper .button:hover { background-color: #e0dcdc;}
+ .service {margin-top:30px;  padding:0 65px; display: inline-block; vertical-align: top; width:30%;}
+ .service .logo {margin-bottom:20px;}
+ .service h3 {margin-bottom:15px;}
+ .service:nth-child(2) {border-left:2px solid #cfcbca; border-right:2px solid #cfcbca; padding-bottom:50px;}
+ .service-info {font-size:28px; line-height:26px; display: inline-block;}
+ .button-wrapper {  margin-top: 30px;  position: relative}
+ .button-wrapper .button { top: 0; left: 50%;  position: absolute; transform: translate(-55%,0); margin: 0 auto;}
+ .button-wrapper .button:hover { background-color: #e0dcdc;}
 .case-box {max-width:100%; box-shadow: inset 0 45px 0 0 #27838a; padding-top:70px; text-align:center; }
 #case-file .case-box .box-button {bottom:-24px;}
 .case-box.active .stamp {position:absolute; right:50px; top:15px; display:block;}
+.testimonial {  text-align: center}
+.testimonial .content { font: italic 26px "abril-text-italic"}
+/*#meet-michelle .photo { width: 20%;}
 #meet-michelle .photo img {border:4px solid #231f20;}
 #meet-michelle .expertise li {font-size:18px; letter-spacing:0; margin-bottom:30px; padding-left:20px; list-style-position:inside; text-indent:-27px;}
-#meet-michelle .expertise li:before {content:"+"; margin-right:10px;}
+#meet-michelle .expertise li:before {content:"+"; margin-right:10px;}*/
 #case-file {padding-bottom:85px;}
 
 /*SINGLE CASE*/
@@ -123,20 +121,7 @@ span.related {font-size:24px;}
 .case-wrap .line {float:left; width:100%; height:2px; background:#cfcbca;}
 
 /*GRIDPAK*/    
-.span1 {width:8.33333333333%;}
-.span2 {width:16.6666666667%; float:left;}
-.span3 {width:25.0%; float:left;}
-.span4 {width:33.3333333333%; float:left;}
-.span5 {width:41.6666666667%; float:left;}
-.span6, .gallery .gallery-item {width:50%; float:left;}
-.span7 {width:58.3333333333%; float:left;}
-.span8 {width:66.6666666667%; float:left;}
-.span9 {width:75.0%; float:left;}
-.span10 {width:83.3333333333%; float:left;}
-.span11 {width:91.6666666667%;}
-.span12 {margin-left:0; width:100%; float:left;}
-.row {margin-left:-25px;}
-.col, .column, .gallery .gallery-item  {padding-left:25px;}
+
 
 /*RETINA*/
 @media (-webkit-min-device-pixel-ratio: 2) , (min-resolution: 192dpi) {
@@ -180,7 +165,7 @@ span.related {font-size:24px;}
   #slider .slide, #slider .slide-overlay {height:400px; top:0;}
   .dog-shield {margin:0 0 25px;}
   #slider .slider-logo {top:55px;}
-  #services .service:nth-child(2) {border:none; padding-bottom:0;}
+.service:nth-child(2) {border:none; padding-bottom:0;}
   #services .button-wrapper .button { top: 0; left: 50%;  position: absolute; transform: translate(-50%,0); margin: 0 auto;}
 
   #case-file .case-box {margin-bottom:60px;}
@@ -205,6 +190,9 @@ span.related {font-size:24px;}
 
 @media screen and (max-width:610px) {
   #services .button-wrapper .button { width: 80%; translate: none; left: 30px;}
+  #footer { height: 100px;}
+  #footer .break {  display:none;}
+  #footer span { display: block;}
 }
 
 @media screen and (max-width:393px) {
