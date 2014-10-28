@@ -522,6 +522,33 @@ function create_post_type() {
   
   	register_post_type( 'Case Updates', $args3);
 
+  	$args4 = array(
+		'labels' => array(
+			'name' => __( 'Stories' ),
+			'singular_name' => __( 'Story' )
+		),
+		'public' => true,
+		'menu_icon' => 'dashicons-book',
+		'rewrite' => array('with_front' => false, 'slug' => 'stories'),
+		'supports' => array( 'title', 'editor' )
+	);
+  
+  	register_post_type( 'Stories', $args4);
+
+  	$args5 = array(
+		'labels' => array(
+			'name' => __( 'Adoptions' ),
+			'singular_name' => __( 'Adoption' )
+		),
+		'public' => true,
+		'menu_icon' => 'dashicons-smiley',
+		'rewrite' => array('with_front' => false, 'slug' => 'adoptions'),
+		'supports' => array( 'title', 'editor', 'thumbnail' )
+	);
+  
+  	register_post_type( 'Adoptions', $args5);
+
+
   flush_rewrite_rules();
 }
 

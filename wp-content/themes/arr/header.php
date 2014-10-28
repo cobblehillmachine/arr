@@ -39,9 +39,11 @@
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/mytheme.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/flexslider.css" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.columnizer.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.flexslider.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/retina.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/mytheme.js"></script>
 
@@ -58,7 +60,7 @@
 			<div id="hamburger" class="mobile"><img src="<?php echo get_template_directory_uri(); ?>/images/hamburger.png" /></div>
 			<div id="mobile-close"><img src="<?php echo get_template_directory_uri(); ?>/images/mobile-close.png" /></div>
 			<div id="nav" class="span8 desktop">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</div>
 		</div>
 	</div>

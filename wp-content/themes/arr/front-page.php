@@ -7,10 +7,11 @@
 			<?php endif; ?>
 		<?php endwhile; wp_reset_query();?>
 		<div class="slider-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/tagline-graphic.png" /></div>
+		<div class="dog-shield"><img src="<?php echo get_template_directory_uri(); ?>/images/dog-shield.png" /></div>
 	</div>
 	<div id="about" class="cont section">
 		<div class="mid-cont">
-			<div class="dog-shield"><img src="<?php echo get_template_directory_uri(); ?>/images/dog-shield.png" /></div>
+			
 			<h4><?php the_field('small_tagline'); ?></h4>
 			<h1><span><?php the_field('big_tagline'); ?></span></h1>
 			<div class="intro row">
@@ -34,18 +35,15 @@
 			<?php query_posts(array('post_type' => 'Services', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 6)); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
+				<a href="/services/#<?php the_title(); ?>">
 					<div class="service span4 col">
 						<div class="logo"><?php the_post_thumbnail('full'); ?></div>
 						<h4><?php the_title(); ?></h4>
-						<div class="service-info"><?php echo get_the_content(); ?></div>
+						<div class="service-info"><?php the_field('preview') ?></div>
 					</div>
+				</a>
 				<?php endwhile; wp_reset_query(); ?>
 			</div>
-			<?php $the_query = new WP_Query( 'page_id=25' ); if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-			<p class="button-wrapper">
-				<a class="button pdf-file" target="_blank" href="<?php the_field('services_pdf'); ?>">READ MORE ABOUT OUR SERVICES</a>
-			</p>
-			<?php endwhile; endif; wp_reset_postdata(); ?>
 		</div>
 	</div>
 	<div class="cont section testimonial mid-cont">
