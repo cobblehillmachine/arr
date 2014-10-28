@@ -20,12 +20,27 @@
 		<div class="adoption-wrapper">
 			<div class="adoption cont">
 				<div class="left-cont">
-					<?php the_post_thumbnail(); ?>
+					<div class="image">
+						<?php
+						$gallery = get_field('gallery');
+						if ($gallery) { ?>
+							<div class="flexslider slider">
+								<?php the_field("gallery"); ?>
+							</div>
+							<div class="flexslider carousel">
+								<?php the_field("gallery"); ?>
+							</div>
+						<?php } else {
+							the_post_thumbnail();
+						} ?>
+						
+					</div>
 					<h1><?php the_title(); ?></h1>
 					<?php the_field('summary'); ?>
 					<a class="button" href="#">SPONSOR THIS ANIMAL</a>
 				</div>
 				<div class="right-cont">
+					<p class="available">Great news!! <?php the_title(); ?> is available for adoption!!</p>
 					<?php the_content(); ?>
 				</div>
 			</div>

@@ -24,7 +24,7 @@ $(window).resize(function() {
 
 function launchSliders() {
   $('.flexslider ul').addClass('slides')
-  $('.flexslider').flexslider({
+  $('.single-service .flexslider').flexslider({
     directionNav: true,
     controlNav: false,
     animation: 'fade',
@@ -32,6 +32,27 @@ function launchSliders() {
     prevText:' ',
     nextText: ''
   })
+  $('.adoption .flexslider.carousel').flexslider({
+    animation: "slide",
+    controlNav: false,
+    directionNav: false,
+    animationLoop: false,
+    slideshow: false,
+    itemWidth: 100,
+    itemMargin: 5,
+    asNavFor: '.adoption .flexslider.slider'
+  })
+  $('.adoption .flexslider.slider').flexslider({
+    animation: "fade",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    prevText:' ',
+    nextText: '',
+    directionNav: false,
+    sync: '.adoption .flexslider.carousel'
+  })
+
 }
 
 function responsiveColumnizer() {
