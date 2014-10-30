@@ -119,13 +119,13 @@ function smoothScroll() {
 }
 
 function subnavOnHover() {
-  $('#menu-item-126').on('mouseenter', function() {
+  $('#menu-item-188').on('mouseenter', function() {
     $('.subnav').show()
     $('.subnav').on('mouseenter', function() {
       $('.subnav').show()
     })
   })
-  $('#menu-item-126').on('mouseleave', function() {
+  $('#menu-item-188').on('mouseleave', function() {
     $('.subnav').hide()
     $('.subnav').on('mouseleave', function() {
       $('.subnav').hide()
