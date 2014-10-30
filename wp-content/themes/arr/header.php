@@ -66,6 +66,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="subnav desktop"><?php wp_nav_menu( array( 'menu' => '3' ) ); ?></div>
+	<div class="subnav desktop"><?php wp_nav_menu( array( 'menu' => '4' ) ); ?></div>
 	<div id="mobile-nav"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></div>
 	<div id="main-wrap" class="cont">

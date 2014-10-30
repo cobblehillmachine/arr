@@ -554,7 +554,7 @@ function create_post_type() {
 			'singular_name' => __( 'Testimonial' )
 		),
 		'public' => true,
-		'menu_icon' => 'dashicons-editor-quote',
+		'menu_icon' => 'dashicons-editor-quotes',
 		'rewrite' => array('with_front' => false, 'slug' => 'adoptions'),
 		'supports' => array( 'title', 'editor' )
 	);
