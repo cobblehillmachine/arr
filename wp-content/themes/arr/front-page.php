@@ -32,7 +32,7 @@
 				<h1><?php echo get_the_content(); ?></h1>
 			<?php endwhile; endif; wp_reset_postdata(); ?>
 			<div class="row">
-			<?php query_posts(array('post_type' => 'Services', 'orderby' => 'rand', 'order' => 'ASC', 'posts_per_page' => 6)); ?>
+			<?php query_posts(array('post_type' => 'Services', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 6)); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 				<a href="/services/#<?php the_title(); ?>">
@@ -47,7 +47,7 @@
 		</div>
 	</div>
 	<div class="cont section testimonial mid-cont">
-		<?php query_posts(array('post_type' => 'Testimonials', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 1)); ?>
+		<?php query_posts(array('post_type' => 'Testimonials', 'orderby' => 'rand', 'order' => 'ASC', 'posts_per_page' => 1)); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php the_content(); ?>
 		<?php endwhile; wp_reset_query(); ?>
