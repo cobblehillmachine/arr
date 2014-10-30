@@ -548,6 +548,19 @@ function create_post_type() {
   
   	register_post_type( 'Adoptions', $args5);
 
+  	$args6 = array(
+		'labels' => array(
+			'name' => __( 'Testimonials' ),
+			'singular_name' => __( 'Testimonial' )
+		),
+		'public' => true,
+		'menu_icon' => 'dashicons-editor-quote',
+		'rewrite' => array('with_front' => false, 'slug' => 'adoptions'),
+		'supports' => array( 'title', 'editor' )
+	);
+  
+  	register_post_type( 'Testimonials', $args6);
+
 
   flush_rewrite_rules();
 }
