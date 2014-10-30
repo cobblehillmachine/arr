@@ -40,7 +40,6 @@
 					<a class="button" href="#">SPONSOR THIS ANIMAL</a>
 				</div>
 				<div class="right-cont">
-					<p class="available">Great news!! <?php the_title(); ?> is available for adoption!!</p>
 					<?php the_content(); ?>
 				</div>
 			</div>

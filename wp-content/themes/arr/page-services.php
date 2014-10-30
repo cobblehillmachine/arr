@@ -71,15 +71,29 @@
 	<div class="mid-cont">
 		<div class="stories">
 			<div class="green"></div>
-		<?php query_posts(array('post_type' => 'Stories', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 10));
-		while ( have_posts() ) : the_post(); ?>
-			<div class="header">
-				<h4>Past Rehabilitated Animals</h4>
-				<h2><?php the_title(); ?></h2>
+			<div class="flexslider">
+				<ul class="slides">
+					<?php query_posts(array('post_type' => 'Stories', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 10));
+					while ( have_posts() ) : the_post(); ?>
+					<li>
+						<div class="header">
+							<h4>Past Rehabilitated Animals</h4>
+							<h1><?php the_title(); ?></h1>
+						</div>
+						<?php $case_file = get_field('link_to_case_file');
+						if ($case_file) { ?>
+							<div class="content-button"><?php the_content(); ?></div>
+							<a class="button case-file-yes" href="<?php the_field("link_to_case_file"); ?>">Read More About This Case</a>
+						<?php }  else { ?>
+							<div class="content"><?php the_content(); ?></div>
+						<?php } ?>						
+						<div class="story-images">
+							<?php the_field('before_and_after_images'); ?> 
+						</div>
+					</li>
+					<?php endwhile; wp_reset_query();?>
+				</ul>
 			</div>
-			<div class="content"><?php the_content(); ?></div>
-			<div class="box">Learn more about this case</div>
-		<?php endwhile; wp_reset_query();?>
 		</div>
 	</div>
 </div>

@@ -61,8 +61,11 @@
 			<div id="mobile-close"><img src="<?php echo get_template_directory_uri(); ?>/images/mobile-close.png" /></div>
 			<div id="nav" class="span8 desktop">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+
+				
 			</div>
 		</div>
 	</div>
+	<div class="subnav desktop"><?php wp_nav_menu( array( 'menu' => '3' ) ); ?></div>
 	<div id="mobile-nav"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></div>
 	<div id="main-wrap" class="cont">
