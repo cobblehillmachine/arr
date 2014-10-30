@@ -118,7 +118,7 @@ blockquote {margin:20px 0; padding:20px 0 0 30px; border-left:2px solid #27838a;
 #Rehabilitation.single-service { padding-bottom: 30px;}
 .single-service .colmn-2 {  float:right;}
 
-.slider-wrapper { width: 47%; margin-left:4%;}
+.slider-wrapper { width: 47%; margin-left:4%; padding-bottom:0;}
 .slider-wrapper ul.flex-direction-nav, .slider-wrapper ul.flex-direction-nav li, .slider-wrapper ul.slides li, .slider-wrapper ul.slides {  list-style:none;}
 .slider-wrapper .flexslider, .adoptions .flexslider, .stories .flexslider { border:0;box-shadow: none; margin-bottom:0;}
 .slider-wrapper .flexslider .slides, .slider-wrapper .flexslider .slides li { margin-left:0; text-align: center}
