@@ -135,7 +135,7 @@ span.caption {  display: block; margin: 0 auto; width:80%;}
 .stories .flexslider .story-images img {  width: 48%; height:auto; display: inline-block;}
 .stories .flexslider .story-images img:last-child { float:right;}
 
-.stories {  background-color:white; border: 4px solid black;}
+.stories {  background-color:white; border: 4px solid black; padding-bottom:30px;}
 .green { height: 40px; background-color: #27838a;}
 .stories .header {  text-align: center; padding-top:25px;}
 .stories .content { width:100%;}
