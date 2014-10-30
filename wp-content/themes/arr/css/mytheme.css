@@ -122,7 +122,7 @@ blockquote {margin:20px 0; padding:20px 0 0 30px; border-left:2px solid #27838a;
 .slider-wrapper ul.flex-direction-nav, .slider-wrapper ul.flex-direction-nav li, .slider-wrapper ul.slides li, .slider-wrapper ul.slides {  list-style:none;}
 .slider-wrapper .flexslider, .adoptions .flexslider, .stories .flexslider { border:0;box-shadow: none; margin-bottom:0;}
 .slider-wrapper .flexslider .slides, .slider-wrapper .flexslider .slides li { margin-left:0; text-align: center}
-.slider-wrapper .flexslider .slides img { height:320px;width: auto; margin: 0 auto;}
+.slider-wrapper .flexslider .slides img { height:320px;width: auto; margin: 0 auto 10px auto;}
 .slider-wrapper .flexslider .flex-direction-nav { position: absolute; bottom: 45px;  width: 100%;  margin: 0;}
 .slider-wrapper .flexslider .flex-direction-nav a, .stories .flexslider .flex-direction-nav a { opacity:1;}
 .slider-wrapper .flexslider .flex-direction-nav a:hover, .stories .flexslider .flex-direction-nav a:hover { opacity: 1}
