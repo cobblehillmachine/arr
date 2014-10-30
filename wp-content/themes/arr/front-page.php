@@ -47,8 +47,10 @@
 		</div>
 	</div>
 	<div class="cont section testimonial mid-cont">
-		<p class="content">“Valiant Animal Rescue & Relief is on the leading edge of animal cruelty work and has a strong reputation within the veterinarian community.  What makes their work so special is that it is done with exceptional professionalism, enormous amounts of passion, and credibility that can be counted on.”</p>
-		<h4 class="author">–Kelli Klein, DVM</h4>
+		<?php query_posts(array('post_type' => 'Testimonials', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 1)); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php the_content(); ?>
+		<?php endwhile; wp_reset_query(); ?>
 	</div>
 	<div id="case-file" class="cont gray-cont">
 		<div class="mid-cont">
