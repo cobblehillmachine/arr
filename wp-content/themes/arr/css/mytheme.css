@@ -195,7 +195,7 @@ span.related {font-size:24px;}
 .gallery .gallery-item:first-child, .gallery .gallery-item:nth-child(2) {margin-top:0;}
 
 /*CASE FILE PAGE OR ARCHIVE*/
-.case-wrap .case-cont {text-align:center; padding:10px; height:250px;}
+.case-wrap .case-cont {text-align:center; padding:10px; height:250px;float: left; width: 50%;}
 .case-wrap .case-cont .table {padding:0 35px;}
 .case-wrap .case-cont .cont-link {height:100%; color:#231f20;}
 .case-wrap .case-cont .cont-link:hover {background:#f4f4f4;}
