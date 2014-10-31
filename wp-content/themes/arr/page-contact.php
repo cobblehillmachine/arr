@@ -18,7 +18,7 @@
 				</div>
 				<div class="email-address">
 					<h4>Email Address</h4>
-					<p><?php the_field('email_address', 'user_2'); ?></p>
+					<p><a href="<?php the_field('email_address', 'user_2'); ?>" target=_blank><?php the_field('email_address', 'user_2'); ?></a></p>
 				</div>
 				<div class="telephone_numbers">
 					<h4>Phone Numbers</h4>
