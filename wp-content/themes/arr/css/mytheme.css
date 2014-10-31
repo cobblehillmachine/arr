@@ -227,6 +227,7 @@ span.related {font-size:24px;}
 
 .contact .sidebar { width: 30%; float:right;}
 .contact .sidebar h4 {  text-align: left}
+.contact .sidebar .email-address {  border-top: 1px #cfcbca solid; border-bottom: 1px #cfcbca solid;}
 
 
 
