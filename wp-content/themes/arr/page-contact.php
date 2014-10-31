@@ -5,7 +5,7 @@
 		<div class="dog-shield"><img src="<?php echo get_template_directory_uri(); ?>/images/dog-shield.png" /></div>
 		<div class="green"></div>
 		<div class="cont top">
-			<h4><?php the_title(); ?></h4>		
+			<h1><?php the_title(); ?></h1>		
 			<div id="wufoo-m7sboub0iw368r">Fill out my <a href="https://arrinc.wufoo.com/forms/m7sboub0iw368r">online form</a>.</div>
 				<script type="text/javascript">var m7sboub0iw368r;(function(d, t) {
 				var s = d.createElement(t), options = {

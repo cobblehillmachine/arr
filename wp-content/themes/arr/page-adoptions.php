@@ -5,7 +5,7 @@
 		<div class="dog-shield"><img src="<?php echo get_template_directory_uri(); ?>/images/dog-shield.png" /></div>
 		<div class="green"></div>
 		<div class="cont top">
-			<h4><?php the_title(); ?></h4>
+			<h1><?php the_title(); ?></h1>
 			<div class="left-cont">
 				<?php the_content(); ?>
 			</div>
