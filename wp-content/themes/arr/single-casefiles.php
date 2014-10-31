@@ -6,12 +6,16 @@
 			<h4>case file</h4>
 			<h1><?php the_title(); ?></h1>
 			<div class="sidebar">
-				<div class="sidebar-top cont feat-photographs desktop">
-					<h3>featured photographs</h3>
-					<div class="photos">
-						<?php the_field('featured_photographs'); ?>
+				<?php $photos = get_field('featured_photographs');
+				if ($photos) { ?>
+					<div class="sidebar-top cont feat-photographs desktop">
+						<h3>featured photographs</h3>
+						<div class="photos">
+							<?php the_field('featured_photographs'); ?>
+						</div>
 					</div>
-				</div>
+				<?php } ?>
+				
 				<div class="sidebar-top cont updates">
 					<div class="desktop">
 						<h3>case updates</h3>
