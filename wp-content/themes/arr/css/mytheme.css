@@ -215,8 +215,9 @@ span.related {font-size:24px;}
 .contact form .hide { display:none;}
 .contact form #foli1 p label {  font-size:15px;}
 .contact form #foli1 p{ width: 49%; display: inline-block; }
-.contact form #foli1 p input, .contact form #foli3, .contact form #foli3 input  {  width: 100%;}
+.contact form #foli1 p input, .contact form #foli3, .contact form #foli3 input, .contact form #foli6 input  {  width: 100%;}
 .contact form #foli1 p.last-name {  float:right;}
+.contact form #foli6 p {  display: inline-block; width: 30%;}
 
 
 /*RETINA*/
