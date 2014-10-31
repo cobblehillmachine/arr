@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
-<div class="mid-cont adoptions">
+<div class="mid-cont contact">
 	<div class="box">
 		<div class="dog-shield"><img src="<?php echo get_template_directory_uri(); ?>/images/dog-shield.png" /></div>
 		<div class="green"></div>
