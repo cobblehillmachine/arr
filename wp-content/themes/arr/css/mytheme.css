@@ -93,7 +93,7 @@ blockquote {margin:20px 0; padding:20px 0 0 30px; border-left:2px solid #27838a;
 .meet-michelle .photos { display:inline-block;width: 160px; margin-right:30px; vertical-align: top}
 .meet-michelle .photos img {margin-bottom:10px;}
 .meet-michelle .content { display: inline-block; width: 53%;}
-.meet-michelle .content h1, .meet-michelle .content h4 {  max-width: none; text-align: left;}
+.meet-michelle .content h1, .meet-michelle .content h4 {  max-width: none; text-align: left; margin:inherit;}
 .meet-michelle .expertise {  border: black 4px solid; display: inline-block; padding: 43px 27px; width:30%;float:right; vertical-align: bottom}
 .meet-michelle .expertise h4 {  margin-bottom:25px; font-size:20px;}
 .meet-michelle .expertise p { font-size:18px;}
