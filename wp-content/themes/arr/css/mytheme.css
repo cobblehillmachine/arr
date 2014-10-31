@@ -225,7 +225,7 @@ span.related {font-size:24px;}
 .contact form .button { float:right;  margin-top:20px; width:auto;}
 .contact form input, .contact form textarea { padding: 10px; font-size:18px;}
 
-.contact .sidebar { width: 20%; float:right;}
+.contact .sidebar { width: 30%; float:right; text-align: left}
 
 
 
