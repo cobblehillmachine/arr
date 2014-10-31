@@ -149,8 +149,8 @@ span.caption {  display: block; margin: 0 auto; width:80%;}
 .adoptions.mid-cont { padding:75px 0;}
 .adoptions .box, .contact .box { max-width:none; margin: 0 auto; display: block; padding:0;}
 .adoptions .box .cont, .contact .box .cont {  width:90%; margin: 0 auto; padding: 80px 0;}
-.adoptions .dog-shield {  margin-top:-40px;}
-.adoptions h4 { margin-top:30px;}
+.adoptions .dog-shield, .contact .dog-shield {  margin-top:-40px;}
+.adoptions h4 .contact .h4 { margin-top:30px;}
 .adoptions h2, .adoptions h4 {  text-align: center}
 .adoptions .top .left-cont { width: 70%; display: inline-block; padding-right: 2%; border-right: 2px #cfcbca solid;}
 .adoptions .top .right-cont {  width: 30%; display: inline-block; float:right; padding-left: 3%; text-align: left}
