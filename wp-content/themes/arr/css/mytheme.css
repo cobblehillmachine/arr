@@ -323,7 +323,7 @@ span.related {font-size:24px;}
   .case-wrap .case-cont {border-bottom:2px solid #cfcbca;}
   .case-wrap .case-cont:last-child {border:none;}
   /*Contact*/
-  .contact .form, .contact .sidebar { display: block; width: 100%; border-right: 0;}
+  .contact form, .contact .sidebar { display: block; width: 100%; border-right: 0;}
 }
 
 @media screen and (max-width:767px) {
