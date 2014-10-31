@@ -88,7 +88,7 @@ blockquote {margin:20px 0; padding:20px 0 0 30px; border-left:2px solid #27838a;
 #case-file {padding-bottom:85px;}
 
 /*ABOUT PAGE*/
-.about-intro {  text-align: center; padding: 60px 0; background-color:white;}
+.about-intro {  text-align: center; padding: 140px 0 60px 0; background-color:white;}
 .about-intro h1 { max-width: 600px; margin: 0 auto;}
 .meet-michelle { padding:140px 0 60px;}
 .meet-michelle .photos { display:inline-block;width: 160px; margin-right:30px; vertical-align: top}
