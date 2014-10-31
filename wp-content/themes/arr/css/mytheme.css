@@ -220,6 +220,7 @@ span.related {font-size:24px;}
 .contact form #foli1 p.last-name {  float:right;}
 .contact form #foli6 p {  display: inline-block; width: 17%;}
 .contact form #foli6 input {  width: 87%;}
+.contact form textarea {  width: 115%; height: 295px;}
 
 
 /*RETINA*/
