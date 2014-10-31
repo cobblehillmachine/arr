@@ -226,7 +226,8 @@ span.related {font-size:24px;}
 .contact form input, .contact form textarea { padding: 10px; font-size:18px;}
 
 .contact .sidebar { width: 30%; float:none !important; display: inline-block; vertical-align: top}
-.contact .sidebar h4 {  text-align: left}
+.contact .sidebar h4 {  text-align: left; font-size:20px;}
+.contact .sidebar p { font-size: 18px;}
 .contact .sidebar .email-address {  border-top: 2px #cfcbca solid; border-bottom: 2px #cfcbca solid;}
 .contact .sidebar .emergencies {  font-family: 'abril-text'; font-size: 16px; font-weight: 300; font-style: italic;}
 
