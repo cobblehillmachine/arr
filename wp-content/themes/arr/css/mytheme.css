@@ -101,6 +101,7 @@ blockquote {margin:20px 0; padding:20px 0 0 30px; border-left:2px solid #27838a;
 .meet-michelle .expertise li:before {content:"+"; margin-right:10px;}
 
 .colmn { width: 48%; display: inline-block; vertical-align: top; padding:80px 0;}
+.bottom-cont {background-color:white;}
 .bottom-cont .colmn h2 { letter-spacing: 0; margin-bottom:0;}
 .bottom-cont .colmn-2 h2 { margin-bottom:20px;}
 .bottom-cont .colmn-2 p {  margin-bottom:45px;}
