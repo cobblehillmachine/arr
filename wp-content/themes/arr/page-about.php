@@ -12,7 +12,7 @@
 <div class="meet-michelle">
 	<div class="cont mid-cont">
 		<h4><?php the_field('small_tagline'); ?></h4>
-		<h1><span><?php the_field('big_tagline'); ?></span></h1>
+		<h1><span><?php the_field('large_tagline'); ?></span></h1>
 		<?php while ( have_posts() ) : the_post(); ?>
 		<div class='photos'>
 			<?php the_field('photos'); ?>
