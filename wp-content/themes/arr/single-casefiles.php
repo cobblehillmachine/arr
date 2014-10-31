@@ -5,8 +5,14 @@
 			<div class="stamp"><img src="<?php echo get_template_directory_uri(); ?>/images/active-case-stamp.png" /></div>
 			<h4>case file</h4>
 			<h1><?php the_title(); ?></h1>
-			<div class="sidebar span4">
-				<div class="sidebar-top cont">
+			<div class="sidebar">
+				<div class="sidebar-top cont feat-photographs desktop">
+					<h3>featured photographs</h3>
+					<div class="photos">
+						<?php the_field('featured_photographs'); ?>
+					</div>
+				</div>
+				<div class="sidebar-top cont updates">
 					<div class="desktop">
 						<h3>case updates</h3>
 						<?php query_posts(array('post_type' => 'Case Updates', 'order' => 'ASC', 'posts_per_page' => 100, 'post_parent' => $post->ID)); ?>
@@ -52,7 +58,7 @@
 
 				</div>
 			</div>
-			<div class="cont-left span8">
+			<div class="cont-left">
 				<div class="info cont">
 					<h3>case summary</h3>
 					<div class="active-note gray-cont cont">
