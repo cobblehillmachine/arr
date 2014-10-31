@@ -6,7 +6,6 @@
 		<div class="green"></div>
 		<div class="cont top">
 			<h4><?php the_title(); ?></h4>
-			<h2><?php the_field('subheading'); ?></h2>
 			<div class="left-cont">
 				<?php the_content(); ?>
 			</div>
