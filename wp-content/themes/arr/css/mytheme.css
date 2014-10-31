@@ -89,7 +89,7 @@ blockquote {margin:20px 0; padding:20px 0 0 30px; border-left:2px solid #27838a;
 
 /*ABOUT PAGE*/
 .about-intro {  text-align: center; padding: 60px 0; background-color:white;}
-.about-intro h4 { max-width: 600px;}
+.about-intro h1 { max-width: 600px; margin: 0 auto;}
 .meet-michelle { padding:140px 0 60px;}
 .meet-michelle .photos { display:inline-block;width: 160px; margin-right:30px; vertical-align: top}
 .meet-michelle .photos img {margin-bottom:10px;}
