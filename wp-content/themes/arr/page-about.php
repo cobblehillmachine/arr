@@ -9,10 +9,15 @@
 	<div class="slider-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/tagline-graphic.png" /></div>
 	<div class="dog-shield"><img src="<?php echo get_template_directory_uri(); ?>/images/dog-shield.png" /></div>
 </div>
-<div class="meet-michelle">
-	<div class="cont mid-cont">
+
+<div class="about-intro">
+	<div class="mid-cont cont">
 		<h4><?php the_field('small_tagline'); ?></h4>
 		<h1><span><?php the_field('large_tagline'); ?></span></h1>
+	</div>
+</div>
+<div class="meet-michelle gray-cont">
+	<div class="cont mid-cont">		
 		<?php while ( have_posts() ) : the_post(); ?>
 		<div class='photos'>
 			<?php the_field('photos'); ?>
