@@ -29,13 +29,12 @@ get_header(); the_post(); ?>
 <div class="services cont ">
 
   <div class="mid-cont">
-    <h2><?php the_title(); ?></h2>
-      <?php $the_query = new WP_Query( 'page_id=25' ); if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-        <h1><?php echo get_the_content(); ?></h1>
-      <?php endwhile; endif; wp_reset_postdata(); ?>
-      <div class="row">
-
-      </div>
+    <header class="page-header">
+      <h1 class="page-title"><?php the_title(); ?></h1>
+    </header>
+    <div class="row">
+      <?php the_content(); ?>
+    </div>
   </div>
 
 </div>
