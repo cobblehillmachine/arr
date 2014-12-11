@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<!--
+
 <div id="slider">
 		<?php if (has_post_thumbnail( $post->ID ) ) :  ?>
 			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
@@ -27,8 +29,6 @@
 		</div>
 	</div>
 </div>
-<!--
-
 
 
 <?php $loop = new WP_Query(array('post_type' => 'Services', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 3)); ?>
