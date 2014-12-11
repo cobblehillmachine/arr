@@ -32,7 +32,7 @@ get_header(); the_post(); ?>
 						<div class="service-info"><?php the_field('preview') ?></div>
 					</div>
 				</a>
-			<?php endwhile; wp_reset_query(); ?>
+			<?php wp_reset_query(); ?>
 		</div>
 	</div>
 </div>
