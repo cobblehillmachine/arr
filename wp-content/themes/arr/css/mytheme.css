@@ -82,7 +82,7 @@ blockquote {margin:20px 0; padding:20px 0 0 30px; border-left:2px solid #27838a;
 .button-wrapper .button:hover { background-color: #e0dcdc;}
 .case-box {max-width:100%; box-shadow: inset 0 45px 0 0 #27838a; padding-top:70px; text-align:center; }
 #case-file .case-box .box-button {bottom:-24px;}
-.case-box.active .stamp {position:absolute; right:50px; top:205px; display:block;}
+.case-box.active .stamp {position:absolute; right:15px; top:60px; display:block;}
 .testimonial {  text-align: center}
 .testimonial .content { font: italic 26px "abril-text-italic"}
 #case-file {padding-bottom:85px;}
@@ -171,7 +171,7 @@ span.caption {  display: block; margin: 0 auto; width:80%;}
 .adoptions .slider img, .adoptions .carousel img {  height: auto;}
 .adoptions .slider { height: 265px; overflow: hidden}
 .adoptions .slider img { height: auto; width: 100%;}
-.adoptions .carousel {  margin-top:20px; height: 80px; overflow: hidden} 
+.adoptions .carousel {  margin-top:20px; height: 80px; overflow: hidden}
 
 /*SINGLE CASE*/
 .case-wrap {margin:75px 0 70px; padding:110px 60px 75px;}
@@ -356,7 +356,3 @@ span.related {font-size:24px;}
   .box strong {font-size:15px;}
   h1 {font-size:36px; line-height:34px;}
 }
-
-
-
-
