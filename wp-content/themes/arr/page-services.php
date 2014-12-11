@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
 <div id="slider">
-		<?php if (has_post_thumbnail( $post->ID ) ): ?>
+		<?php if (has_post_thumbnail( $post->ID ) ): while( have_posts() ) : the_post(); ?>
 			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
 			<div class="slide " style="background-image: url('<?php echo $image[0]; ?>')"></div>
-		<?php endif; ?>
+		<?php endwhile; endif; wp_reset_postdata(); ?>
 	<div class="slider-logo"><img src="<?php echo get_template_directory_uri(); ?>/images/tagline-graphic.png" /></div>
 	<div class="dog-shield"><img src="<?php echo get_template_directory_uri(); ?>/images/dog-shield.png" /></div>
 </div>
