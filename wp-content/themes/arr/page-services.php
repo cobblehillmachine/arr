@@ -24,7 +24,9 @@ get_header(); the_post(); ?>
 			<h1><?php echo get_the_content(); ?></h1>
 		<?php endwhile; endif; wp_reset_postdata(); ?>
 		<div class="row">
-			<?php query_posts( array('post_type' => 'Services', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 6) ); ?>
+			<?php query_posts( array('post_type' => 'Services', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 6) );
+
+				while( have_posts() ) : the_post(); ?>
 				<a href="#<?php the_title(); ?>">
 					<div class="service span4 col">
 						<div class="logo"><?php the_post_thumbnail('full'); ?></div>
@@ -32,7 +34,7 @@ get_header(); the_post(); ?>
 						<div class="service-info"><?php the_field('preview') ?></div>
 					</div>
 				</a>
-			<?php wp_reset_query(); ?>
+			<?php endwhile; wp_reset_query(); ?>
 		</div>
 	</div>
 </div>
