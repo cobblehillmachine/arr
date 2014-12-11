@@ -25,6 +25,19 @@
  * @since Twenty Fourteen 1.0
  */
 
+function get_faq_content( $id )
+{
+	if( is_int( $id ) )
+	{
+		$faqs = get_field( '', $id );
+	}
+
+	return $html;
+}
+
+
+
+
 /**
  * Set up the content width value based on the theme's design.
  *
@@ -491,8 +504,8 @@ function create_post_type() {
 		'rewrite' => array('with_front' => false, 'slug' => 'services'),
 		'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' )
 	);
-  
-  	register_post_type( 'Services', $args1);
+
+  register_post_type( 'Services', $args1);
 
   	$args2 = array(
 		'labels' => array(
@@ -505,7 +518,7 @@ function create_post_type() {
 		'rewrite' => array('with_front' => false, 'slug' => 'case-file'),
 		'supports' => array( 'title', 'editor' )
 	);
-  
+
   	register_post_type( 'Case Files', $args2);
 
   	$args3 = array(
@@ -519,7 +532,7 @@ function create_post_type() {
 		'rewrite' => array('with_front' => false, 'slug' => 'case-updates'),
 		'supports' => array( 'title', 'editor' )
 	);
-  
+
   	register_post_type( 'Case Updates', $args3);
 
   	$args4 = array(
@@ -532,7 +545,7 @@ function create_post_type() {
 		'rewrite' => array('with_front' => false, 'slug' => 'stories'),
 		'supports' => array( 'title', 'editor' )
 	);
-  
+
   	register_post_type( 'Stories', $args4);
 
   	$args5 = array(
@@ -545,7 +558,7 @@ function create_post_type() {
 		'rewrite' => array('with_front' => false, 'slug' => 'adoptions'),
 		'supports' => array( 'title', 'editor', 'thumbnail' )
 	);
-  
+
   	register_post_type( 'Adoptions', $args5);
 
   	$args6 = array(
@@ -558,16 +571,16 @@ function create_post_type() {
 		'rewrite' => array('with_front' => false, 'slug' => 'adoptions'),
 		'supports' => array( 'title', 'editor' )
 	);
-  
+
   	register_post_type( 'Testimonials', $args6);
 
 
   flush_rewrite_rules();
 }
 
-//Adds gallery shortcode defaults of size="full" and columns="2" 
+//Adds gallery shortcode defaults of size="full" and columns="2"
 function amethyst_gallery_atts( $out, $pairs, $atts ) {
-   
+
     $atts = shortcode_atts( array(
         'columns' => '2',
         'size' => 'full',
@@ -604,10 +617,10 @@ function my_caseupdates_parent_meta_box( $post ) {
 
     $parents = get_posts(
         array(
-            'post_type'   => 'casefiles', 
-            'orderby'     => 'title', 
-            'order'       => 'ASC', 
-            'numberposts' => -1 
+            'post_type'   => 'casefiles',
+            'orderby'     => 'title',
+            'order'       => 'ASC',
+            'numberposts' => -1
         )
     );
 
@@ -627,7 +640,7 @@ function my_caseupdates_parent_meta_box( $post ) {
 
 // add_action("manage_posts_custom_column",  "caseupdates_custom_columns");
 // add_filter("manage_caseupdates_posts_columns", "caseupdates_edit_columns");
- 
+
 // function caseupdates_edit_columns($columns){
 //     $columns = array(
 //         "cb" => "<input type=\"checkbox\" />",
@@ -636,21 +649,21 @@ function my_caseupdates_parent_meta_box( $post ) {
 //   );
 //   return $columns;
 // }
- 
+
 // function caseupdates_custom_columns($column){
 //     global $post;
-    
+
 //     $custom = get_post_custom();
- 
+
 //     switch ($column) {
- 
+
 //     case "case_file":
 //       $parents = get_posts(
 //         array(
-//             'post_type'   => 'casefiles', 
-//             'orderby'     => 'title', 
-//             'order'       => 'ASC', 
-//             'numberposts' => -1 
+//             'post_type'   => 'casefiles',
+//             'orderby'     => 'title',
+//             'order'       => 'ASC',
+//             'numberposts' => -1
 //         )
 //     );
 
@@ -664,9 +677,9 @@ function my_caseupdates_parent_meta_box( $post ) {
 
 //         //echo '</select>';
 //     }
-            
+
 //             break;
- 
+
 //     }
 // }
 
@@ -698,21 +711,21 @@ function my_caseupdates_parent_meta_box( $post ) {
 // 			$terms = get_post($post->post_parent);
 // 			$parents = get_posts(
 //         array(
-//             'post_type'   => 'casefiles', 
-//             'orderby'     => 'title', 
-//             'order'       => 'ASC', 
-//             'numberposts' => -1 
+//             'post_type'   => 'casefiles',
+//             'orderby'     => 'title',
+//             'order'       => 'ASC',
+//             'numberposts' => -1
 //         ));
 
-			
-				
+
+
 
 // 				/* Loop through each term, linking to the 'edit posts' page for the specific term. */
 // 				foreach ( $parents as $parent ) {
-					
+
 // 						//esc_url( add_query_arg( array( 'post_type' => 'Case Updates', 'caseupdates' => $parent->slug ), 'edit.php' ) ),
 // 						echo $parent->post_title;
-					
+
 // 				}
 
 
@@ -723,4 +736,3 @@ function my_caseupdates_parent_meta_box( $post ) {
 // 			break;
 // 	}
 // }
-

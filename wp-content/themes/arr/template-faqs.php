@@ -34,6 +34,7 @@ get_header(); the_post(); ?>
     </header>
     <div class="row">
       <?php the_content(); ?>
+      <?php echo get_faq_content( $post->ID ); ?>
     </div>
   </div>
 
