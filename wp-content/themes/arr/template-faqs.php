@@ -27,16 +27,20 @@ get_header(); the_post(); ?>
 </div>
 
 <div class="services cont center">
-
   <div class="mid-cont">
     <h4><?php the_title(); ?></h4>
     <h1>Got a Question? </h1>
     <div class="row">
       <?php the_content(); ?>
-      <?php echo get_faq_content( $post->ID ); ?>
     </div>
+    <?php echo get_faq_questions( $post->ID );?>
   </div>
+</div>
 
+<div class="services cont">
+  <div class="mid-cont">
+    <?php echo get_faq_answers( $post->ID ); ?>
+  </div>
 </div>
 
 <?php get_footer(); ?>

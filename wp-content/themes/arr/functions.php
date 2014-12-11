@@ -25,7 +25,7 @@
  * @since Twenty Fourteen 1.0
  */
 
-function get_faq_content( $id )
+function get_faq_questions( $id )
 {
 	if( is_int( $id ) )
 	{
@@ -37,14 +37,30 @@ function get_faq_content( $id )
 
 			foreach( $faqs as $faq )
 			{
-				$html .= '<li><a href="#" data-scroll-to="true">'.$faq['faq_question'].'</a></li>';
+				$html .= '<li><a href="#'.substr( 0, 10, implode( '', explode( ' ', $faq['question']))).'" data-scroll-to="true">'.$faq['faq_question'].'</a></li>';
 			}
 
-			$html .= '</ul><hr /> <ul class="faq-answers">';
+			$html .= '</ul>';
+		}
+	}
+
+	return $html;
+}
+
+
+function get_faq_answers( $id )
+{
+	if( is_int( $id ) )
+	{
+		$faqs = get_field( 'faqs', $id );
+
+		if( $faqs != false )
+		{
+						$html .= '<ul class="faq-answers">';
 
 			foreach( $faqs as $faq )
 			{
-				$html .= '<li>
+				$html .= '<li data-sroll-to-id="'.substr( 0, 10, implode( '', explode( ' ', $faq['question']))).'">
 										<div class="faq-question"><h3>'.$faq['faq_question'].'</h3></div>
 										<div class="faq-answer">'.$faq['faq_answer'].'</div>
 									</li>';
