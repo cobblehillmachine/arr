@@ -26,12 +26,11 @@ get_header(); the_post(); ?>
 
 </div>
 
-<div class="services cont ">
+<div class="services cont center">
 
   <div class="mid-cont">
-    <header class="page-header">
-      <h1 class="page-title"><?php the_title(); ?></h1>
-    </header>
+    <h4><?php the_title(); ?></h4>
+    <h1>Got a Question? </h1>
     <div class="row">
       <?php the_content(); ?>
       <?php echo get_faq_content( $post->ID ); ?>
