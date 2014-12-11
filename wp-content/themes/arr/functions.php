@@ -37,7 +37,7 @@ function get_faq_content( $id )
 
 			foreach( $faqs as $faq )
 			{
-				$html .= '<li><a href="#'.substr( 0, 10, implode( '', explode( ' ', $faq['faq_question']))).'" data-scroll-to="true">'.$faq['faq_question'].'</a></li>';
+				$html .= '<li><a href="#" data-scroll-to="true">'.$faq['faq_question'].'</a></li>';
 			}
 
 			$html .= '</ul>'
