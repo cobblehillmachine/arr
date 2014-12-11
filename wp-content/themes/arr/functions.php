@@ -27,37 +27,39 @@
 
 function get_faq_content( $id )
 {
+	/*
 	if( is_int( $id ) )
 	{
-		$faqs = get_field( 'faqs', $id );
+	$faqs = get_field( 'faqs', $id );
 
-		if( $faqs != false )
-		{
-			$html .= '<ul class="faq-questions">';
+	if( $faqs != false )
+	{
+	$html .= '<ul class="faq-questions">';
 
-			foreach( $faqs as $faq )
-			{
-				$html .= '<li><a href="#" data-scroll-to="true">'.$faq['faq_question'].'</a></li>';
-			}
+	foreach( $faqs as $faq )
+	{
+	$html .= '<li><a href="#" data-scroll-to="true">'.$faq['faq_question'].'</a></li>';
+}
 
-			$html .= '</ul>'
+$html .= '</ul>'
 
-			$html .= '<hr />
-								<ul  class="faq-answers">';
+$html .= '<hr />
+<ul  class="faq-answers">';
 
-			foreach( $faqs as $faq )
-			{
-				$html .= '<li>
-										<div class="faq-question"><h3>'.$faq['faq_question'].'</h3></div>
-										<div class="faq-answer">'.wpautop($faq['faq_answer']).'</div>
-									</li>';
-			}
+foreach( $faqs as $faq )
+{
+$html .= '<li>
+<div class="faq-question"><h3>'.$faq['faq_question'].'</h3></div>
+<div class="faq-answer">'.wpautop($faq['faq_answer']).'</div>
+</li>';
+}
 
-			$html .= '</ul>';
-		}
-	}
+$html .= '</ul>';
+}
+}
 
-	return $html;
+return $html;
+	*/
 }
 
 
