@@ -5,7 +5,7 @@
 		<div class="dog-shield"><img src="<?php echo get_template_directory_uri(); ?>/images/dog-shield.png" /></div>
 		<div class="green"></div>
 		<div class="cont top">
-			<h1><?php the_title(); ?></h1>		
+			<h1><?php the_title(); ?></h1>
 			<div id="wufoo-m7sboub0iw368r">Fill out my <a href="https://arrinc.wufoo.com/forms/m7sboub0iw368r">online form</a>.</div>
 				<script type="text/javascript">var m7sboub0iw368r;(function(d, t) {
 				var s = d.createElement(t), options = {
@@ -30,7 +30,7 @@
 				</div>
 				<div class="email-address">
 					<h4>Email Address</h4>
-					<p><a href="<?php the_field('email_address', 'user_2'); ?>" target=_blank><?php the_field('email_address', 'user_2'); ?></a></p>
+					<p><a href="mailto:<?php the_field('email_address', 'user_2'); ?>" target=_blank><?php the_field('email_address', 'user_2'); ?></a></p>
 				</div>
 				<div class="telephone_numbers">
 					<h4>Phone Numbers</h4>
@@ -40,7 +40,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 </div>
 <?php endwhile; wp_reset_query();?>
