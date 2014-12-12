@@ -13,7 +13,7 @@
 				<?php the_field('sidebar'); ?>
 			</div>
 			<?php endwhile; wp_reset_query();?>
-		</div>		
+		</div>
 		<?php query_posts(array('post_type' => 'Adoptions', 'orderby' => 'menu_order', 'order' => 'ASC', 'posts_per_page' => 100));
 		while ( have_posts() ) : the_post(); ?>
 		<div class="adoption-wrapper">
@@ -32,11 +32,11 @@
 						<?php } else {
 							the_post_thumbnail();
 						} ?>
-						
+
 					</div>
 					<h1><?php the_title(); ?></h1>
 					<?php the_field('summary'); ?>
-					<a class="button" href="https://npo.justgive.org/ARR">SPONSOR THIS ANIMAL</a>
+					<a class="button" href="https://npo.justgive.org/ARR" target="_blank">SPONSOR THIS ANIMAL</a>
 				</div>
 				<div class="right-cont">
 					<?php the_content(); ?>

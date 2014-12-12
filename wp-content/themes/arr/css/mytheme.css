@@ -72,6 +72,9 @@ blockquote {margin:20px 0; padding:20px 0 0 30px; border-left:2px solid #27838a;
 #slider .slider-logo {position:absolute; z-index:10; top:50%; transform: translate(0,-50%); -webkit-transform: translate(0,-50%);  -moz-transform: translate(0,-50%); left:calc(50% - 146px);}
 .box strong {font-size:20px; text-transform:uppercase; float:left; width:100%;}
 .row a {  color:black;}
+.row p{
+  text-align:left;
+}
 .service {margin-top:30px;  padding:0 65px; display: inline-block; vertical-align: top; width:30%;}
 .service .logo {margin-bottom:20px;}
 .service h3 {margin-bottom:15px;}
@@ -240,6 +243,61 @@ span.related {font-size:24px;}
 .contact .sidebar div { padding-left:20px;}
 
 
+/*FAQs*/
+
+.faqs.cont{
+  background-color:#ededed;
+  padding:60px 0;
+}
+.faq-questions{
+  padding-left:18px;
+  text-align:left;
+}
+.faq-questions li{
+  display:listitem;
+  list-style:circle;
+}
+.faq-questions a{
+  display:block;
+  width:100%;
+  padding:8px 0;
+  font-size:16px;
+  font-family: 'abril-text';
+}
+
+.faq-answers{
+}
+
+.faq-answers li{
+  padding:50px 0;
+  border-top:1px solid #ddd;
+}
+.faq-answers li:first-child{
+  border:0;
+}
+
+.faq-answers li .back-to-top{
+  text-align:right;
+}
+
+.back-to-top a,
+.back-to-top a:visited{
+  font-size:12px;
+  color:#888;
+  font-family: 'abril-text';
+  text-decoration:none;
+  text-transform:uppercase;
+}
+
+.back-to-top a:hover{
+  color:#27838a;
+}
+
+
+.flex-direction-nav a.flex-next:before,
+.flex-direction-nav a.flex-next:after{
+  display:none;
+}
 
 /*RETINA*/
 @media (-webkit-min-devicforme-pixel-ratio: 2) , (min-resolution: 192dpi) {

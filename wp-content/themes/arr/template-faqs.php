@@ -27,7 +27,7 @@ get_header(); the_post(); ?>
 </div>
 
 <div class="services cont center">
-  <div class="mid-cont">
+  <div class="mid-cont"><br />
     <h4><?php the_title(); ?></h4>
     <h1>Got a Question? </h1>
     <div class="row">
@@ -37,7 +37,7 @@ get_header(); the_post(); ?>
   </div>
 </div>
 
-<div class="services cont">
+<div class="faqs cont">
   <div class="mid-cont">
     <?php echo get_faq_answers( $post->ID ); ?>
   </div>

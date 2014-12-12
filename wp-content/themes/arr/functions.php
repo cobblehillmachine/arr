@@ -33,11 +33,11 @@ function get_faq_questions( $id )
 
 		if( $faqs != false )
 		{
-			$html = '<ul class="faq-questions">';
+			$html = '<ul class="faq-questions" id="faq-top">';
 
 			foreach( $faqs as $faq )
 			{
-				$html .= '<li><a href="#'.substr( 0, 10, implode( '', explode( ' ', $faq['question']))).'" data-scroll-to="true">'.$faq['faq_question'].'</a></li>';
+				$html .= '<li><a href="#'.substr( str_replace(' ','',$faq['faq_question']), 0, 20).'" data-scroll-to="true">'.$faq['faq_question'].'</a></li>';
 			}
 
 			$html .= '</ul>';
@@ -56,14 +56,15 @@ function get_faq_answers( $id )
 
 		if( $faqs != false )
 		{
-						$html .= '<ul class="faq-answers">';
+			$html .= '<ul class="faq-answers">';
 
 			foreach( $faqs as $faq )
 			{
-				$html .= '<li data-sroll-to-id="'.substr( 0, 10, implode( '', explode( ' ', $faq['question']))).'">
-										<div class="faq-question"><h3>'.$faq['faq_question'].'</h3></div>
-										<div class="faq-answer">'.$faq['faq_answer'].'</div>
-									</li>';
+				$html .= '<li class="faq-" id="'.substr( str_replace(' ','',$faq['faq_question']), 0, 20).'">
+				<div class="faq-question"><h3>'.$faq['faq_question'].'</h3></div>
+				<div class="faq-answer">'.$faq['faq_answer'].'</div>
+				<div class="back-to-top"><a href="#faq-top" data-scroll-to="true">Back to top</a></div>
+				</li>';
 			}
 
 			$html .= '</ul>';
@@ -72,7 +73,6 @@ function get_faq_answers( $id )
 
 	return $html;
 }
-
 
 
 
