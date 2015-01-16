@@ -256,6 +256,13 @@ span.related {font-size:24px;}
   .meet-michelle .content { width:47%;}
 }
 
+@media screen and (max-width:1400px) {
+  #header #nav li {
+    margin-left: 40px;
+  }
+
+}
+
 @media screen and (max-width:1260px) {
   #header .mobile { display: block}
   #header .desktop {  display: none}
