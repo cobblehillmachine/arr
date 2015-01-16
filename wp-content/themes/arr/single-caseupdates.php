@@ -5,19 +5,12 @@
 			<div class="stamp"><img src="<?php echo get_template_directory_uri(); ?>/images/active-case-stamp.png" /></div>
 			<h4>case update:&nbsp;<span><?php echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent ); ?></span></h4>
 			<h1><?php the_title(); ?></h1>
-			<div class="cont-left span8">
-				<div class="info cont">
-					<?php while ( have_posts() ) : the_post(); ?>
-						<?php the_content(); ?>
-					<?php endwhile; wp_reset_query(); ?>
-				</div>
-			</div>
-			<div class="sidebar span4">
-				<div class="sidebar-top cont">		
+			<div class=" sidebar ">
+				<div class="sidebar-top cont">
 					<h3>related case file</h3>
 					<span class="related"><?php echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent ); ?></span>
 					<a class="button" href="<?php global $post; $parentId = $post->post_parent; $linkToParent = get_permalink($parentId); echo $linkToParent; ?>">view the case file</a>
-					
+
 				</div>
 				<div class="sidebar-bottom cont">
 					<h3>related case updates</h3>
@@ -29,13 +22,21 @@
 								<?php the_title(); ?>
 							</a>
 						<?php endwhile; wp_reset_query(); ?>
-					<?php } else { ?>
-						<?php $the_query = new WP_Query( 'page_id=6' ); if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-							<?php the_field('no_update_message'); ?>
-						<?php endwhile; endif; wp_reset_query(); ?>
-					<?php } ?>
+						<?php } else { ?>
+							<?php $the_query = new WP_Query( 'page_id=6' ); if( $the_query->have_posts() ) : while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+								<?php the_field('no_update_message'); ?>
+							<?php endwhile; endif; wp_reset_query(); ?>
+							<?php } ?>
+						</div>
+					</div>
+			<div class="cont-left ">
+				<div class="info cont">
+					<?php while ( have_posts() ) : the_post(); ?>
+						<?php the_content(); ?>
+					<?php endwhile; wp_reset_query(); ?>
 				</div>
 			</div>
+
 		</div>
 	</div>
 <?php get_footer(); ?>
