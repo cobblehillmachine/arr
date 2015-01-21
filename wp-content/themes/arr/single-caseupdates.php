@@ -6,7 +6,7 @@
 			<h4>case update:&nbsp;<span><?php echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent ); ?></span></h4>
 			<h1><?php the_title(); ?></h1>
 			<div class=" sidebar ">
-				<div class="sidebar-top cont">
+				<div class="sidebar-top cont sidebar-update">
 					<h3>related case file</h3>
 					<span class="related"><?php echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent ); ?></span>
 					<a class="button" href="<?php global $post; $parentId = $post->post_parent; $linkToParent = get_permalink($parentId); echo $linkToParent; ?>">view the case file</a>
@@ -30,7 +30,7 @@
 						</div>
 					</div>
 			<div class="cont-left ">
-				<div class="info cont">
+				<div class="info cont updates">
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php the_content(); ?>
 					<?php endwhile; wp_reset_query(); ?>

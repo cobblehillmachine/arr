@@ -25,6 +25,39 @@
  * @since Twenty Fourteen 1.0
  */
 
+
+
+function get_home_page_images( $id )
+{
+	if( is_int( $id ) )
+	{
+		$images = get_field( 'slider_images', $id );
+		// $fallback = get_field('mobile_fallback');
+
+		if( $images != false )
+		{
+			//$fallback != false ? $html .= '<div class="home-image"><img src="'.$fallback['url'].'" atl="" /></div>': '' ;
+
+			$html .= '<ul id="js-home-slider">';
+
+			foreach( $images as $img )
+			{
+
+				$html .= '<li>
+										<img src="'.$img['slider_image']['url'].'" />
+									</li>';
+			}
+
+			$html .= '</ul>';
+		}
+	}
+
+	return $html;
+}
+
+
+
+
 function get_faq_questions( $id )
 {
 	if( is_int( $id ) )

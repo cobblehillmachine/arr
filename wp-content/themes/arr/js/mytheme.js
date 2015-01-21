@@ -1,5 +1,21 @@
 $(document).ready(function() {
 
+  $('.photo-button-container').on('click', 'a', function () {
+    $('html, body').animate({
+      scrollTop: $('#photos').offset().top }, 1000);
+    });
+
+
+    $('#js-home-slider').bxSlider({
+      pager: false,
+      speed: 2000,
+      auto:true,
+      controls:false,
+      mode:'fade',
+      pause: 6000
+    });
+
+
   $(document).on('click', 'a[data-scroll-to]', function(e)
   {
     e.preventDefault();

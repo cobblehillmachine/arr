@@ -11,7 +11,7 @@
 								<div class="table">
 									<div class="table-cell">
 										<h3><?php the_field("optional_date_of_case") ?></h3>
-										<h2><?php the_title(); ?></h2>			
+										<h2><?php the_title(); ?></h2>
 										<div class="button">read full case</div>
 									</div>
 
@@ -20,13 +20,12 @@
 						</div>
 					<?php endwhile; wp_reset_query(); ?>
 					<div class="span6 case-cont">
-						<a href="<?php the_field("pdf_file"); ?>" target=_blank class="cont-link cont">
+						<a href="/past-cases" class="cont-link cont">
 							<div class="table">
 								<div class="table-cell">
-									<h2>See More Past Cases</h2>			
-									<div class="button">Download PDF</div>
+									<h2>See More Past Cases</h2>
+									<div class="button">See Cases</div>
 								</div>
-
 							</div>
 						</a>
 					</div>

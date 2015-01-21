@@ -27,6 +27,7 @@
 				<div class="mailing-address">
 					<h4>Mailing Address</h4>
 					<p><?php the_field('street_address', 'user_2'); ?><br><?php the_field('city_&_state', 'user_2'); ?></p>
+					<p>Fax<br><?php the_field('fax_number', 'user_2'); ?></p>
 				</div>
 				<div class="email-address">
 					<h4>Email Address</h4>
